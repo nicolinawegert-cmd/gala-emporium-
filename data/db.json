@@ -1,0 +1,29 @@
+{
+  "clubs": [
+      {
+        "id": "a37c",
+        "name": "Jazz-corner",
+        "description": "En klubb för jazzentusiaster att samlas och njuta av musik."
+      },
+      {
+        "id": "fg5i",
+        "name": "indie-stage",
+        "description": "En plattform för indieartister att framföra sina verk."
+      },
+      {
+        "id": "z9x2",
+        "name": "rock-lounge",
+        "description": "En avslappnad miljö för rockfans att umgås och lyssna på liveframträdanden."
+      },
+      {
+        "id": "m3n8",
+        "name": "techno-dome",
+        "description": "En futuristisk klubb för technoälskare med pulserande beats och ljusshower."
+      },
+      {
+        "id": "q7r4",
+        "name": "comedy-spot",
+        "description": "En plats där komiker kan uppträda och publiken kan skratta tillsammans."
+      }
+    ]
+}
