@@ -1,0 +1,48 @@
+/*Giggle Galaxy - neon inspirerad komediklubb */
+
+/*Tema färger (CSS-variabler) */
+:root {
+  --gg-bg: #0b132b;
+  --gg-accent: #f72585;
+  --gg-secondary: #4895ef;
+  --gg-text: #f8f9fa;
+}
+
+/* Grundläggande layout */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--gg-bg);
+  color: var(--gg-text);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.gg-header {
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, var(--gg-accent), var(--gg-secondary));
+  color: white;
+  box-shadow: 0 0 20px rgba(247, 37, 133, 0.5);
+}
+
+h1{
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#upcoming-events {
+  padding: 2rem 1rem;
+}
+
+#event-list {
+  display: grid;
+  gap: 1rem;
+  justify-content: center;
+}
+
+footer {
+  background-color: #111;
+  color: #aaa;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
