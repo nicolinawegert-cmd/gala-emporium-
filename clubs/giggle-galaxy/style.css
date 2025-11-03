@@ -99,3 +99,78 @@ footer {
   font-size: 1rem;
   margin: 0;
 }
+
+/* Club info section*/
+#club-info {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 40px auto;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 0 , 200, 0.2);
+  color: #fff;
+}
+
+#club-info h2 {
+  color: #ff77ff;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+
+#club-info p {
+  color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+#club-info {
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#club-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(247, 37, 133, 0.5);
+}
+
+/*Two-column layout for larger screens*/
+@media (min-width: 900px) {
+  main.gg-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* left = about section, right = events*/
+    gap: 2rem;
+    align-items: start;
+    max-width: 1100px;
+    margin: 2rem auto;
+    text-align: left;
+  }
+
+  #club-info {
+    margin: 0;
+    max-width: 500px;
+    text-align: left;
+    justify-self: start;
+  }
+  
+  #upcoming-events {
+    margin: 0;
+  }
+
+  #upcoming-events h2 {
+    text-align: left;
+    margin-left: 10px;
+  }
+}
+  
+  /*mobile layout - keep everything centered*/
+  @media (max-width: 899px) {
+    main {
+      display: block;
+      text-align: center;
+    }
+
+    #club-info {
+      margin: 2rem auto;
+    }
+  }
