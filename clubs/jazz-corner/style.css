@@ -1,0 +1,29 @@
+header {
+    background: linear-gradient(90deg, #5c258d 0%, #b06ab3 50%, #d4af37 100%);
+    text-align: center;
+    font-size: 25px;
+    padding: 60px 20px;
+    margin: 0;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    margin:0;
+    list-style: none;
+    padding: 10px ;
+    justify-content: center;
+    gap: 30px;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    padding: 6px 10px; 
+}
+nav a:hover {
+  text-decoration: underline; 
+}
