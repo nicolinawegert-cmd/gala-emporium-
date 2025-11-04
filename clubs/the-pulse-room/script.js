@@ -1,3 +1,4 @@
+// Glöm ej att flytta ut lista från script.js till en separat db.json.
 const events = [
   {
     title: "Rhythm Awakening",
@@ -34,7 +35,6 @@ events.forEach(e => {
   eventList.appendChild(card);
 });
 
-// Interaktivitet – visa/dölj beskrivning vid klick
 document.querySelectorAll(".details-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     const desc = btn.nextElementSibling;
@@ -42,3 +42,5 @@ document.querySelectorAll(".details-btn").forEach(btn => {
     btn.textContent = desc.classList.contains("hidden") ? "Visa detaljer" : "Dölj detaljer";
   });
 });
+
+
