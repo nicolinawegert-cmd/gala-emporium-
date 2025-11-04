@@ -1,4 +1,4 @@
-/*Giggle Galaxy - neon inspirerad komediklubb */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Exo+2:wght@400;500&display=swap');
 
 /*Tema färger (CSS-variabler) */
 :root {
@@ -28,12 +28,16 @@ footer {
 
 /* Grundläggande layout */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   background-color: var(--gg-bg);
   color: var(--gg-text);
   margin: 0;
   padding: 0;
   text-align: center;
+}
+
+h1,h2 {
+  font-family: 'Orbitron', sans-serif;
 }
 
 .gg-header {
