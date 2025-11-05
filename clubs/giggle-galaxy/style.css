@@ -28,6 +28,7 @@ footer {
   color: #aaa;
   padding: 1rem;
   font-size: 0.9rem;
+  text-align: center;
 }
 
 body {
@@ -36,7 +37,6 @@ body {
   color: var(--gg-text);
   margin: 0;
   padding: 0;
-  /*text-align: center;*/
 }
 
 h1,h2 {
@@ -56,13 +56,13 @@ h1 {
   text-align: center;
 }
 
-#upcoming-events {
+.gg-events {
   padding: 2rem 1rem;
 }
 
 
 
-#event-list {
+.gg-event-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
@@ -96,7 +96,7 @@ h1 {
 }
 
 /* Club info section*/
-#club-info {
+.gg-club {
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 15px;
@@ -109,19 +109,19 @@ h1 {
    transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-#club-info h2 {
+.gg.club h2 {
   color: #ff77ff;
   margin-bottom: 10px;
   font-size: 1.6rem;
 }
 
-#club-info p {
+.gg-club p {
   color: #ccc;
   font-size: 1.1rem;
   line-height: 1.5;
 }
 
-#club-info:hover {
+.gg-club:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 20px rgba(247, 37, 133, 0.5);
 }
@@ -138,18 +138,18 @@ h1 {
     text-align: left;
   }
 
-  #club-info {
+  .gg-club {
     margin: 0;
     max-width: 500px;
     text-align: left;
     justify-self: start;
   }
   
-  #upcoming-events {
+  .gg-events {
     margin: 0;
   }
 
-  #upcoming-events h2 {
+  .gg-events h2 {
     text-align: left;
     margin-left: 10px;
   }
@@ -162,7 +162,7 @@ h1 {
       text-align: center;
     }
 
-    #club-info {
+    .gg-club {
       margin: 2rem auto;
     }
   }
