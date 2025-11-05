@@ -1,6 +1,4 @@
 import start from './pages/start.js';
-import jazzClub from './pages/jazz-club.js';
-import metalClub from './pages/metal-club.js';
 
 // Our menu: label to display in menu and 
 // function to run on menu choice
