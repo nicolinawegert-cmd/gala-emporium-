@@ -24,27 +24,23 @@ main {
 /* Push footer to the bottom*/
 footer {
   margin-top: auto;
+  background-color: #111;
+  color: #aaa;
+  padding: 1rem;
+  font-size: 0.9rem;
 }
 
-/* Grundläggande layout */
 body {
   font-family: 'Exo 2', sans-serif;
   background-color: var(--gg-bg);
   color: var(--gg-text);
   margin: 0;
   padding: 0;
-  text-align: center;
+  /*text-align: center;*/
 }
 
 h1,h2 {
   font-family: 'Orbitron', sans-serif;
-}
-
-.gg-header {
-  padding: 2rem 1rem;
-  background: linear-gradient(135deg, var(--gg-accent), var(--gg-secondary));
-  color: white;
-  box-shadow: 0 0 20px rgba(247, 37, 133, 0.5);
 }
 
 h1 {
@@ -52,24 +48,19 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
+.gg-header {
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, var(--gg-accent), var(--gg-secondary));
+  color: white;
+  box-shadow: 0 0 20px rgba(247, 37, 133, 0.5);
+  text-align: center;
+}
+
 #upcoming-events {
   padding: 2rem 1rem;
 }
 
-#event-list {
-  display: grid;
-  gap: 1rem;
-  justify-content: center;
-}
 
-footer {
-  background-color: #111;
-  color: #aaa;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-
-/*Event cars styling*/
 
 #event-list {
   display: grid;
@@ -77,7 +68,7 @@ footer {
   gap: 1.5rem;
   padding: 1rem;
 }
-/*style for each individual event card*/
+
 .event-card {
   background-color: #1b263b;
   border: 1px solid var(--gg-secondary);
@@ -115,6 +106,7 @@ footer {
   text-align: center;
   box-shadow: 0 0 15px rgba(255, 0 , 200, 0.2);
   color: #fff;
+   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 #club-info h2 {
@@ -127,10 +119,6 @@ footer {
   color: #ccc;
   font-size: 1.1rem;
   line-height: 1.5;
-}
-
-#club-info {
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 #club-info:hover {
