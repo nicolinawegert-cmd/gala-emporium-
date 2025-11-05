@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Exo+2:wght@400;500&display=swap');
+
+/*Tema färger (CSS-variabler) */
+:root {
+  --gg-bg: #0b132b;
+  --gg-accent: #f72585;
+  --gg-secondary: #4895ef;
+  --gg-text: #f8f9fa;
+}
+
+/* Layout setup to keep the footer at the bottom*/
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Let main expand to fill remaining space */
+main {
+  flex: 1;
+}
+
+/* Push footer to the bottom*/
+footer {
+  margin-top: auto;
+  background-color: #111;
+  color: #aaa;
+  padding: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+body {
+  font-family: 'Exo 2', sans-serif;
+  background-color: var(--gg-bg);
+  color: var(--gg-text);
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.gg-header {
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, var(--gg-accent), var(--gg-secondary));
+  color: white;
+  box-shadow: 0 0 20px rgba(247, 37, 133, 0.5);
+  text-align: center;
+}
+
+.gg-events {
+  padding: 2rem 1rem;
+}
+
+
+
+.gg-event-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.event-card {
+  background-color: #1b263b;
+  border: 1px solid var(--gg-secondary);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(72, 149, 239, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-card:hover {
+  transform: translate(-5px);
+  box-shadow: 0 0 15px rgba(247, 37, 133, 0.6);
+}
+
+.event-card h3 {
+  color: var(--gg-accent);
+  margin-bottom: 0.5rem;
+  font-size: 1.0rem;
+}
+
+.event-card p {
+  color: rgba(248, 249, 250, 0.8);
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Club info section*/
+.gg-club {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 40px auto;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 0 , 200, 0.2);
+  color: #fff;
+   transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.gg.club h2 {
+  color: #ff77ff;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+
+.gg-club p {
+  color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.gg-club:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(247, 37, 133, 0.5);
+}
+
+/*Two-column layout for larger screens*/
+@media (min-width: 900px) {
+  main.gg-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* left = about section, right = events*/
+    gap: 2rem;
+    align-items: start;
+    max-width: 1100px;
+    margin: 2rem auto;
+    text-align: left;
+  }
+
+  .gg-club {
+    margin: 0;
+    max-width: 500px;
+    text-align: left;
+    justify-self: start;
+  }
+  
+  .gg-events {
+    margin: 0;
+  }
+
+  .gg-events h2 {
+    text-align: left;
+    margin-left: 10px;
+  }
+}
+  
+  /*mobile layout - keep everything centered*/
+  @media (max-width: 899px) {
+    main {
+      display: block;
+      text-align: center;
+    }
+
+    .gg-club {
+      margin: 2rem auto;
+    }
+  }
