@@ -70,7 +70,6 @@
      "title": "Miles Davis Tribute",
      "date": "2024-07-10",
      "time": "20:00",
-     "club": "Jazz-corner",
      "clubId":"a37c"
    },
   {
@@ -78,7 +77,6 @@
      "title": "Ella Fitzgerald Night",
      "date": "2024-07-17",
      "time": "20:00",
-     "club": "Jazz-corner",
      "clubId":"a37c"
    },
   {
@@ -86,7 +84,6 @@
      "title": "John Coltrane Celebration",
      "date": "2024-07-24",
      "time": "20:00",
-     "club": "Jazz-corner",
      "clubId":"a37c"
    }
   ]
