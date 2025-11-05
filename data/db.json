@@ -4,6 +4,14 @@
       "id": "hh72",
       "name": "Rally House",
       "description": "Rally House - nostalgic house music based on the play station one racing games of the early two thousands. \n\n Founded by a mysterious figure only known as prod. DTM. Rally house is a place to relax and bop to dj sets that remind you of childhood"
+      "id": "gg01",
+      "name": "Giggle Galaxy",
+      "description": "Giggle Galaxy - A neon-inspired comedy club where laughter shines brighter than stars.\n\n Founded in 2021 by comedian and astrophysicist Ihab Samar, Giggle Galaxy brings laughter to the heart of the city. Known for its neon lights and futuristic vibe, the club quickly became a hub for both rising stars and humorists."
+    },
+    {
+      "id":"a37c",
+      "name":"Jazz-corner",
+      "description":"Jazz Corner - A cozy jazz club that transports you to the golden age of jazz with its intimate ambiance and soulful performances.\n\n Established in 2015 by jazz enthusiast and saxophonist Lena Thompson, Jazz Corner has become a beloved venue for jazz lovers. The club's warm lighting, vintage decor, and exceptional acoustics create the perfect setting for unforgettable musical experiences."
     }
   ],
   "events": [
@@ -55,6 +63,30 @@
      "date": "2025-12-04",
      "time": "21:00",
      "club": "Rally House"
+  
+  {
+    "id": 5,
+     "title": "Miles Davis Tribute",
+     "date": "2024-07-10",
+     "time": "20:00",
+     "club": "Jazz-corner",
+     "clubId":"a37c"
+   },
+  {
+    "id": 6,
+     "title": "Ella Fitzgerald Night",
+     "date": "2024-07-17",
+     "time": "20:00",
+     "club": "Jazz-corner",
+     "clubId":"a37c"
+   },
+  {
+    "id": 7,
+     "title": "John Coltrane Celebration",
+     "date": "2024-07-24",
+     "time": "20:00",
+     "club": "Jazz-corner",
+     "clubId":"a37c"
    }
   ]
-}
+} 
