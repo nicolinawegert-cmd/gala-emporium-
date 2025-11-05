@@ -1,29 +1,39 @@
 {
   "clubs": [
-      {
-        "id": "a37c",
-        "name": "Jazz-corner",
-        "description": "En klubb för jazzentusiaster att samlas och njuta av musik."
-      },
-      {
-        "id": "fg5i",
-        "name": "indie-stage",
-        "description": "En plattform för indieartister att framföra sina verk."
-      },
-      {
-        "id": "z9x2",
-        "name": "rock-lounge",
-        "description": "En avslappnad miljö för rockfans att umgås och lyssna på liveframträdanden."
-      },
-      {
-        "id": "m3n8",
-        "name": "techno-dome",
-        "description": "En futuristisk klubb för technoälskare med pulserande beats och ljusshower."
-      },
-      {
-        "id": "q7r4",
-        "name": "comedy-spot",
-        "description": "En plats där komiker kan uppträda och publiken kan skratta tillsammans."
-      }
-    ]
+    {
+      "id": "gg01",
+      "name": "Giggle Galaxy",
+      "description": "Giggle Galaxy - A neon-inspired comedy club where laughter shines brighter than stars.\n\n Founded in 2021 by comedian and astrophysicist Ihab Samar, Giggle Galaxy brings laughter to the heart of the city. Known for its neon lights and futuristic vibe, the club quickly became a hub for both rising stars and humorists."
+    }
+  ],
+  "events": [
+   {
+     "id": 1,
+     "title": "Starlight Standup",
+     "date": "2025-11-10",
+     "time": "19:00",
+     "club": "Giggle Galaxy"
+   },
+   {
+    "id": 2,
+     "title": "Open Mic Night",
+     "date": "2025-11-17",
+     "time": "18:30",
+     "club": "Giggle Galaxy"
+   },
+   {
+    "id": 3,
+     "title": "The Laugh Battle",
+     "date": "2025-11-24",
+     "time": "20:00",
+     "club": "Giggle Galaxy"
+   },
+   {
+    "id": 4,
+     "title": "Improv in space",
+     "date": "2025-12-01",
+     "time": "19:30",
+     "club": "Giggle Galaxy"
+   }
+  ]
 }
