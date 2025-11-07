@@ -50,7 +50,12 @@
         };
 
         function toReturnAdmin(){
-            
+        return `<form id="myForm">
+        <p>Username</p>
+        <input id="firstInput" type="text" />
+        <p>password</p>
+        <input id="secondInput" type="text" />
+        </form>`
         }
 
         document.querySelector("#explanation").innerHTML = toReturnExplanation();
@@ -68,6 +73,7 @@
             if(userName == "admin" && password == "Hqqp123!"){
                 admin = true;
             }
+            load();
         }   
 
         document.getElementById("firstInput").addEventListener("keydown", (event) => {
