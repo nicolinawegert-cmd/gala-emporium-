@@ -1,3 +1,11 @@
+import clubInfoAndEvents from "../../js/utils/club-info-and-events.js";
+
+(async () => {
+    const html = await clubInfoAndEvents("the-pulse-room");
+
+    document.getElementById("the-pulse-content").innerHTML = html;
+})();
+ 
 
 const eventList = document.getElementById("event-list");
 
