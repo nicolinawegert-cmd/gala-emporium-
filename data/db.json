@@ -55,21 +55,21 @@
       "title": "PXRKX set",
       "date": "2025-12-01",
       "time": "17:30",
-      "club": "Rally House"
+      "clubId": "hh72"
     },
     {
       "id": 6,
       "title": "prod DTM set",
       "date": "2025-12-03",
       "time": "20:00",
-      "club": "Rally House"
+      "clubId": "hh72"
     },
     {
       "id": 7,
       "title": "OMINXRU Set",
       "date": "2025-12-04",
       "time": "21:00",
-      "club": "Rally House"
+      "clubId": "hh72"
     },
     {
       "id": 8,
