@@ -1,6 +1,6 @@
 import clubInfoAndEvents from "../../clubInfoAndEvents.js";
 
-export default async function jazzClub() {
+export default async function jazzCorner() {
     return clubInfoAndEvents ('jazz-corner');
 }
 const events = [
