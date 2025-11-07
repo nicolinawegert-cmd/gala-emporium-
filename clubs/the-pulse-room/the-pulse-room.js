@@ -1,24 +1,3 @@
-// Glöm ej att flytta ut lista från script.js till en separat db.json.
-const events = [
-  {
-    title: "Rhythm Awakening",
-    date: "2025-11-05",
-    img: "../../assets/images/rhythm.jpg",
-    description: "En dansperformance där ljus och ljud samspelar i realtid."
-  },
-  {
-    title: "Neon Motion",
-    date: "2025-11-12",
-    img: "../../assets/images/neon-motion.jpg",
-    description: "Elektronisk danskväll med live-DJ och visuell ljusshow."
-  },
-  {
-    title: "Pulse Experiment",
-    date: "2025-11-20",
-    img: "../../assets/images/pulse-experiment.jpg",
-    description: "Publiken styr musiken genom rörelse – känn rytmen på riktigt!"
-  }
-];
 
 const eventList = document.getElementById("event-list");
 
