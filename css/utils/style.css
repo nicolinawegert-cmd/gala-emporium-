@@ -1,0 +1,13 @@
+@import '/pages/the-pulse-room.css';
+@import '/pages/jazz-corner.css';
+@import '/pages/giggle-galaxy.css';
+@import '/pages/rally-house.css';
+@import '/pages/moose-vibes.css';
+@import '/pages/start.css';
+
+:root {
+  --primary: #e91e63;
+  --accent: #00e5ff;
+  --bg: #0d0d0d;
+  --text: #f5f5f5;
+}
