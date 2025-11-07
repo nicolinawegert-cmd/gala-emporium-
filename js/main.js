@@ -4,7 +4,7 @@ import start from './pages/start.js';
 // function to run on menu choice
 const menu = {
   "start": { label: 'Start', function: start },
-  "jazz-klubben": { label: 'Jazz-klubben', function: jazzClub },
+  "jazz-corner": { label: 'Jazz-corner', function: jazzClub },
   "metal-klubben": { label: 'Metal-klubben', function: metalClub }
 };
 

@@ -1,3 +1,8 @@
+import clubInfoAndEvents from "../../clubInfoAndEvents.js";
+
+export default async function jazzClub() {
+    return clubInfoAndEvents ('jazz-corner');
+}
 const events = [
     { title: "Miles Davis Tribute", date: "2024-07-10", time: "20:00", price: 200, description: "An evening dedicated to the legendary Miles Davis." },
     { title: "Ella Fitzgerald Night", date: "2024-07-17", time: "20:00", price: 200, description: "Celebrate the First Lady of Song with classic hits." },
