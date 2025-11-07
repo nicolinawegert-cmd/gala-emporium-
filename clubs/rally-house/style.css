@@ -21,6 +21,13 @@ body{
     padding-left: 20%;
     padding-right: 20%;
     padding-bottom: 20%;
+    text-align: center;
+
+    width: 60%;           /* prevent stretching */
+    margin: 0 auto;        /* center it */
+    padding: 2%;         /* keep internal spacing consistent */
+
+    box-sizing: border-box; /* ensures padding doesn’t add to width */
 
     h1{
         color: #670000;
@@ -37,7 +44,7 @@ body{
 #events{
     display: flex;
 
-    padding-top: 35%;
+    padding-top: 15%;
 
     /*chat gpt */
     display: grid;
@@ -53,4 +60,23 @@ article{
     padding-right: 5%;
     border: 2px solid #670000;
     border-radius: 10px;
+}
+
+@media (max-width: 570px){
+    #main{
+        width: 90%;           /* prevent stretching */
+    }
+
+}
+
+@media (max-width: 279px){
+    #events {
+    grid-template-columns: repeat(2, 1fr); /* only 2 columns on small screens */
+  }
+}
+
+@media (max-width: 191px){
+    #events {
+    grid-template-columns: repeat(1, 1fr); /* only 2 columns on small screens */
+  }
 }

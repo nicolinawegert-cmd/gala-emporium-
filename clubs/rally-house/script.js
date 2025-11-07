@@ -9,7 +9,7 @@
         {
             html = "";
 
-            html = clubs.map(({name, description}) => { if(name == "Rally House") { return `
+            html = clubs.map(({id, description}) => { if(id == "hh72") { return `
             <h3>${description}</h3>
             `
             
@@ -25,7 +25,7 @@
         function toReturnEvents(){
             let html = ""; 
 
-            html = events.map(({club, time, date, title}) => { if(club == "Rally House") { return `
+            html = events.map(({clubId, time, date, title}) => { if(clubId == "hh72") { return `
             <article>
             <h2>${title}</h2>
             <h3>${date}</h3>
