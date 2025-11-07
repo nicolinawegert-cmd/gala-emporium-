@@ -14,6 +14,11 @@
       "id": "a37c",
       "name": "Jazz-corner",
       "description": "Jazz Corner - A cozy jazz club that transports you to the golden age of jazz with its intimate ambiance and soulful performances.\n\n Established in 2015 by jazz enthusiast and saxophonist Lena Thompson, Jazz Corner has become a beloved venue for jazz lovers. The club's warm lighting, vintage decor, and exceptional acoustics create the perfect setting for unforgettable musical experiences."
+    },
+    {
+      "id": "tp45",
+      "name": "The Pulse Room",
+      "description": "The Pulse Room - An electrifying nightclub that pulses with energy, where cutting-edge electronic music meets immersive visual experiences.\n\n Founded in 2023 by DJ and visual artist Maxine Vega, The Pulse Room is a haven for electronic music enthusiasts. The club features state-of-the-art sound systems, dynamic lighting, and interactive installations that create a multisensory experience for partygoers."
     }
   ],
   "events": [
@@ -86,6 +91,30 @@
       "date": "2024-07-24",
       "time": "20:00",
       "clubId": "a37c"
+    },
+    {
+      "id": 11,
+      "title": "Rhythm Awakening",
+      "date": "2025-11-05",
+      "time": "19:00",
+      "description": "En dansperformance där ljus och ljud samspelar i realtid.",
+      "clubId": "tp45"
+    },
+    {
+      "id": 12,
+      "title": "Neon Motion",
+      "date": "2025-11-12",
+      "time": "20:00",
+      "description": "Elektronisk danskväll med live-DJ och visuell ljusshow.",
+      "clubId": "tp45"
+    },
+    {
+      "id": 13,
+      "title": "Pulse Experiment",
+      "date": "2025-11-20",
+      "time": "21:00",
+      "description": "Publiken styr musiken genom rörelse – känn rytmen på riktigt!",
+      "clubId": "tp45"
     }
   ]
 }
