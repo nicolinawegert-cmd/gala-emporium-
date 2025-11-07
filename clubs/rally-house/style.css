@@ -39,6 +39,13 @@ body{
 
     padding-top: 35%;
 
+    /*chat gpt */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 5%; /* spacing between events */
+    justify-items: center; /* optional: center content */
+    margin-top: 7%;
+
 }
 
 article{
