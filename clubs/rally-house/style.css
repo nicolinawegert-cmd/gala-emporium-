@@ -4,6 +4,15 @@
   font-style: normal;
 }
 
+form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    p{
+        color: #fff;
+    }
+}
+
 body{
     background: url(https://images.steamusercontent.com/ugc/927052267576803471/2385C4C29F428A972318B8C881D70CE8F436758B/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false);
     background-size: cover;
