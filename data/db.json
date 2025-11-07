@@ -1,9 +1,12 @@
 {
   "clubs": [
+
     {
       "id": "hh72",
       "name": "Rally House",
       "description": "Rally House - nostalgic house music based on the play station one racing games of the early two thousands. \n\n Founded by a mysterious figure only known as prod. DTM. Rally house is a place to relax and bop to dj sets that remind you of childhood"
+    },
+    {
       "id": "gg01",
       "name": "Giggle Galaxy",
       "description": "Giggle Galaxy - A neon-inspired comedy club where laughter shines brighter than stars.\n\n Founded in 2021 by comedian and astrophysicist Ihab Samar, Giggle Galaxy brings laughter to the heart of the city. Known for its neon lights and futuristic vibe, the club quickly became a hub for both rising stars and humorists."
@@ -63,7 +66,7 @@
      "date": "2025-12-04",
      "time": "21:00",
      "club": "Rally House"
-  
+    },
   {
     "id": 5,
      "title": "Miles Davis Tribute",

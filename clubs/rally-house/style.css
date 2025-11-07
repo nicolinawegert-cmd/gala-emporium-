@@ -9,29 +9,41 @@ body{
     background-size: cover;
     justify-content: space-evenly;
     display: flex;
+    flex-wrap: wrap;
 
     font-family: "Fjalla One", sans-serif;
 
 }
 
-article{
-    display: flex;
-    flex-direction: column;
-    h2{
-            padding-left: 75%;
-            padding-bottom: 25%;
-    }
-}
-
 #main{
     background-color: rgba(250, 215, 236, 0.75);
+    border: 5px solid #670000;
     padding-left: 20%;
     padding-right: 20%;
-    padding-bottom: 50%;
-    border: 5px solid #670000;
+    padding-bottom: 20%;
 
     h1{
         color: #670000;
         font-size: 50px;
     }
+}
+
+#songs{
+    article{
+        flex-direction: column;
+    }
+}
+
+#events{
+    display: flex;
+
+    padding-top: 35%;
+
+}
+
+article{
+    padding-left: 5%;
+    padding-right: 5%;
+    border: 2px solid #670000;
+    border-radius: 10px;
 }
