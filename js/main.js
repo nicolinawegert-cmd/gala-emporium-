@@ -1,7 +1,7 @@
 import start from './pages/start.js';
-import thePulse from './clubs/the-pulse-room.js';
-import jazzCorner from './clubs/jazz-corner.js';
-import giggleGalaxy from './clubs/giggle-galaxy.js';
+import thePulse from './pages/the-pulse-room.js';
+import jazzCorner from './pages/jazz-corner.js';
+import giggleGalaxy from './/giggle-galaxy.js';
 import rallyHouse from './clubs/rally-house.js';
 
 
