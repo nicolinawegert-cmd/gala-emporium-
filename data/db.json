@@ -2,94 +2,120 @@
   "clubs": [
 
     {
-      "id": "hh72",
-      "name": "Rally House",
-      "description": "Rally House - nostalgic house music based on the play station one racing games of the early two thousands. \n\n Founded by a mysterious figure only known as prod. DTM. Rally house is a place to relax and bop to dj sets that remind you of childhood"
-    },
-    {
       "id": "gg01",
       "name": "Giggle Galaxy",
       "description": "Giggle Galaxy - A neon-inspired comedy club where laughter shines brighter than stars.\n\n Founded in 2021 by comedian and astrophysicist Ihab Samar, Giggle Galaxy brings laughter to the heart of the city. Known for its neon lights and futuristic vibe, the club quickly became a hub for both rising stars and humorists."
     },
     {
-      "id":"a37c",
-      "name":"Jazz-corner",
-      "description":"Jazz Corner - A cozy jazz club that transports you to the golden age of jazz with its intimate ambiance and soulful performances.\n\n Established in 2015 by jazz enthusiast and saxophonist Lena Thompson, Jazz Corner has become a beloved venue for jazz lovers. The club's warm lighting, vintage decor, and exceptional acoustics create the perfect setting for unforgettable musical experiences."
+      "id": "hh72",
+      "name": "Rally House",
+      "description": "Rally House - nostalgic house music based on the play station one racing games of the early two thousands. \n\n Founded by a mysterious figure only known as prod. DTM. Rally house is a place to relax and bop to dj sets that remind you of childhood"
+    },
+    {
+      "id": "a37c",
+      "name": "Jazz-corner",
+      "description": "Jazz Corner - A cozy jazz club that transports you to the golden age of jazz with its intimate ambiance and soulful performances.\n\n Established in 2015 by jazz enthusiast and saxophonist Lena Thompson, Jazz Corner has become a beloved venue for jazz lovers. The club's warm lighting, vintage decor, and exceptional acoustics create the perfect setting for unforgettable musical experiences."
+    },
+    {
+      "id": "tp45",
+      "name": "The Pulse Room",
+      "description": "The Pulse Room - An electrifying nightclub that pulses with energy, where cutting-edge electronic music meets immersive visual experiences.\n\n Founded in 2023 by DJ and visual artist Maxine Vega, The Pulse Room is a haven for electronic music enthusiasts. The club features state-of-the-art sound systems, dynamic lighting, and interactive installations that create a multisensory experience for partygoers."
     }
   ],
   "events": [
-   {
-     "id": 1,
-     "title": "Starlight Standup",
-     "date": "2025-11-10",
-     "time": "19:00",
-     "club": "Giggle Galaxy"
-   },
-   {
-    "id": 2,
-     "title": "Open Mic Night",
-     "date": "2025-11-17",
-     "time": "18:30",
-     "club": "Giggle Galaxy"
-   },
-   {
-    "id": 3,
-     "title": "The Laugh Battle",
-     "date": "2025-11-24",
-     "time": "20:00",
-     "club": "Giggle Galaxy"
-   },
-   {
-    "id": 4,
-     "title": "Improv in space",
-     "date": "2025-12-01",
-     "time": "19:30",
-     "club": "Giggle Galaxy"
-   },
     {
-    "id": 8,
-     "title": "PXRKX set",
-     "date": "2025-12-01",
-     "time": "17:30",
-     "club": "Rally House"
-   },
-    {
-    "id": 9,
-     "title": "prod DTM set",
-     "date": "2025-12-03",
-     "time": "20:00",
-     "club": "Rally House"
-   },
-    {
-    "id": 10,
-     "title": "OMINXRU Set",
-     "date": "2025-12-04",
-     "time": "21:00",
-     "club": "Rally House"
+      "id": 1,
+      "title": "Starlight Standup",
+      "date": "2025-11-10",
+      "time": "19:00",
+      "clubId": "aa220"
     },
-  {
-    "id": 5,
-     "title": "Miles Davis Tribute",
-     "date": "2024-07-10",
-     "time": "20:00",
-     "club": "Jazz-corner",
-     "clubId":"a37c"
-   },
-  {
-    "id": 6,
-     "title": "Ella Fitzgerald Night",
-     "date": "2024-07-17",
-     "time": "20:00",
-     "club": "Jazz-corner",
-     "clubId":"a37c"
-   },
-  {
-    "id": 7,
-     "title": "John Coltrane Celebration",
-     "date": "2024-07-24",
-     "time": "20:00",
-     "club": "Jazz-corner",
-     "clubId":"a37c"
-   }
+    {
+      "id": 2,
+      "title": "Open Mic Night",
+      "date": "2025-11-17",
+      "time": "18:30",
+      "clubId": "bb835"
+    },
+    {
+      "id": 3,
+      "title": "The Laugh Battle",
+      "date": "2025-11-24",
+      "time": "20:00",
+      "clubId": "cc654"
+    },
+    {
+      "id": 4,
+      "title": "Improv in space",
+      "date": "2025-12-01",
+      "time": "19:30",
+      "clubId": "dd256"
+    },
+    {
+      "id": 5,
+      "title": "PXRKX set",
+      "date": "2025-12-01",
+      "time": "17:30",
+      "club": "Rally House"
+    },
+    {
+      "id": 6,
+      "title": "prod DTM set",
+      "date": "2025-12-03",
+      "time": "20:00",
+      "club": "Rally House"
+    },
+    {
+      "id": 7,
+      "title": "OMINXRU Set",
+      "date": "2025-12-04",
+      "time": "21:00",
+      "club": "Rally House"
+    },
+    {
+      "id": 8,
+      "title": "Miles Davis Tribute",
+      "date": "2024-07-10",
+      "time": "20:00",
+      "clubId": "a37c"
+    },
+    {
+      "id": 9,
+      "title": "Ella Fitzgerald Night",
+      "date": "2024-07-17",
+      "time": "20:00",
+      "clubId": "a37c"
+    },
+    {
+      "id": 10,
+      "title": "John Coltrane Celebration",
+      "date": "2024-07-24",
+      "time": "20:00",
+      "clubId": "a37c"
+    },
+    {
+      "id": 11,
+      "title": "Rhythm Awakening",
+      "date": "2025-11-05",
+      "time": "19:00",
+      "description": "En dansperformance där ljus och ljud samspelar i realtid.",
+      "clubId": "tp45"
+    },
+    {
+      "id": 12,
+      "title": "Neon Motion",
+      "date": "2025-11-12",
+      "time": "20:00",
+      "description": "Elektronisk danskväll med live-DJ och visuell ljusshow.",
+      "clubId": "tp45"
+    },
+    {
+      "id": 13,
+      "title": "Pulse Experiment",
+      "date": "2025-11-20",
+      "time": "21:00",
+      "description": "Publiken styr musiken genom rörelse – känn rytmen på riktigt!",
+      "clubId": "tp45"
+    }
   ]
-} 
+}
