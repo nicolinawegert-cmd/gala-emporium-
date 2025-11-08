@@ -1,4 +1,5 @@
 import loadStart from './pages/start.js';
+import loadBooking from './booking.js';
 import loadPulseRoom from './pages/the-pulse-room.js';
 import loadJazzCorner from './pages/jazz-corner.js';
 import loadGiggleGalaxy from './pages/giggle-galaxy.js';
@@ -13,6 +14,7 @@ const menu = {
   "giggle-galaxy": { label: 'Giggle-galaxy', function: loadGiggleGalaxy },
   "rally-house": { label: 'Rally-house', function: loadRallyHouse },
   "the-pulse-room": { label: 'The-pulse-room', function: loadPulseRoom },
+  "booking": { label: 'Booking', function: loadBooking },
 };
 
 function createMenu() {
