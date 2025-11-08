@@ -1,11 +1,20 @@
-import start from './pages/start.js';
+import loadStart from './pages/start.js';
+import loadBooking from './booking.js';
+import loadPulseRoom from './pages/the-pulse-room.js';
+import loadJazzCorner from './pages/jazz-corner.js';
+import loadGiggleGalaxy from './pages/giggle-galaxy.js';
+import loadRallyHouse from './pages/rally-house.js';
+
 
 // Our menu: label to display in menu and 
 // function to run on menu choice
 const menu = {
-  "start": { label: 'Start', function: start },
-  "jazz-corner": { label: 'Jazz-corner', function: jazzClub },
-  "metal-klubben": { label: 'Metal-klubben', function: metalClub }
+  "start": { label: 'Start', function: loadStart },
+  "jazz-corner": { label: 'Jazz-corner', function: loadJazzCorner },
+  "giggle-galaxy": { label: 'Giggle-galaxy', function: loadGiggleGalaxy },
+  "rally-house": { label: 'Rally-house', function: loadRallyHouse },
+  "the-pulse-room": { label: 'The-pulse-room', function: loadPulseRoom },
+  "booking": { label: 'Booking', function: loadBooking },
 };
 
 function createMenu() {
