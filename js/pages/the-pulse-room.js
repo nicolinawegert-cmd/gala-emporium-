@@ -1,33 +1,30 @@
-import clubInfoAndEvents from "../../js/utils/club-info-and-events.js";
+export default async function loadPulseRoom() {
+  const clubId = "the-pulse-room";
 
-(async () => {
-    const html = await clubInfoAndEvents("the-pulse-room");
+  const clubRes = await fetch(`https://localhost:3000/clubs/${clubId}`);
+  const club = await clubRes.json();
 
-    document.getElementById("the-pulse-content").innerHTML = html;
-})();
- 
+  const eventsRes = await fetch(`https://localhost:3000/events?clubId=${clubId}`);
+  const events = await eventsRes.json();
 
-const eventList = document.getElementById("event-list");
+  return `
+    <section class="club-header pulse-theme">
+      <h1>${club.name}</h1>
+      <p>${club.description}</p>
+    </section>
 
-events.forEach(e => {
-  const card = document.createElement("div");
-  card.classList.add("event-card");
-  card.innerHTML = `
-    <img src="${e.img}" alt="Bild från ${e.title}">
-    <h3>${e.title}</h3>
-    <p><strong>${e.date}</strong></p>
-    <button class="details-btn">Visa detaljer</button>
-    <p class="event-desc hidden">${e.description}</p>
+    <section class="events-list">
+      ${events.map(event => `
+        <article class="event-card">
+          <img src="${event.img}" alt="${event.title}">
+          <h3>${event.title}</h3>
+          <p><strong>${event.date}</strong></p>
+          <details>
+            <summary>More Info</summary>
+            <p>${event.description}</p>
+          </details>
+        </article>
+      `).join('')}
+    </section>
   `;
-  eventList.appendChild(card);
-});
-
-document.querySelectorAll(".details-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const desc = btn.nextElementSibling;
-    desc.classList.toggle("hidden");
-    btn.textContent = desc.classList.contains("hidden") ? "Visa detaljer" : "Dölj detaljer";
-  });
-});
-
-
+}
