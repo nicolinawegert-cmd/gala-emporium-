@@ -1,8 +1,8 @@
 import loadStart from './pages/start.js';
 import loadPulseRoom from './pages/the-pulse-room.js';
 import loadJazzCorner from './pages/jazz-corner.js';
-import loadGiggleGalaxy from './/giggle-galaxy.js';
-import loadRallyHouse from './clubs/rally-house.js';
+import loadGiggleGalaxy from './pages/giggle-galaxy.js';
+import loadRallyHouse from './pages/rally-house.js';
 
 
 // Our menu: label to display in menu and 
