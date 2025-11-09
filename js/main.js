@@ -4,6 +4,7 @@ import loadPulseRoom from './pages/the-pulse-room.js';
 import loadJazzCorner from './pages/jazz-corner.js';
 import loadGiggleGalaxy from './pages/giggle-galaxy.js';
 import loadRallyHouse from './pages/rally-house.js';
+import loadAdmin from './admin.js';
 
 
 // Our menu: label to display in menu and 
@@ -15,6 +16,7 @@ const menu = {
   "rally-house": { label: 'Rally-house', function: loadRallyHouse },
   "the-pulse-room": { label: 'The-pulse-room', function: loadPulseRoom },
   "booking": { label: 'Booking', function: loadBooking },
+  "admin": {label: 'Admin', function: loadAdmin },
 };
 
 function createMenu() {
