@@ -1,4 +1,21 @@
-document.addEventListener("DOMContentLoaded", async () => {
+  export default async function loadGiggleGalaxy() {
+      const main = document.querySelector("main");
+
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = "./css/pages/giggle-galaxy.css";
+      document.head.appendChild(link);
+      
+      main.innerHTML = `
+      <section class="giggle-header">
+        <h2>Giggle Galaxy</h2>
+        <p>Welcome to Giggle Galaxy - where laughter meets the stars!</p>
+        </section>
+
+        <section id="club-info"></section>
+        <section id="event-list"></section>
+      `;
+
   const eventList = document.getElementById("event-list");
   const clubInfo = document.getElementById("club-info");
 
@@ -13,7 +30,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // If found, display club description
     if (giggleGalaxyClub && clubInfo) {
       clubInfo.innerHTML = `
-      <h2>About Us</h2>
+      <h3>About Us</h3>
       <p>${giggleGalaxyClub.description}</p>
       `;
     }
@@ -27,19 +44,17 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Check if events exist
     if (giggleEvents.length > 0) {
-      giggleEvents.forEach(event => {
-        const div = document.createElement("div");
-        div.classList.add("event-card");
-        div.innerHTML = `
-          <h3>${event.title}</h3>
-           <p>${event.date} - ${event.time}</p>
-    `;
-        eventList.appendChild(div);
-      });
+      eventList.innerHTML = giggleEvents.map(event => `
+       <div class="event-card">
+       <h3>${event.title}</h3>
+       <p>${event.date} - ${event.time}</p>
+       </div>
+        `).join("");
     } else {
       eventList.innerHTML = "<p>No events found for Giggle Galaxy</p>";
     }
   } catch (error) {
     console.error("Error fetching data:", error);
-    eventList.innerHTML = "<p>Failed to load data. Please try again later.</p>"
-  }});
+    eventList.innerHTML = "<p>Failed to load data. Please try again later.</p>";
+  }
+}
