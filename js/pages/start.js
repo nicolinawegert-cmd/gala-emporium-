@@ -1,4 +1,4 @@
-import { getEvents } from "..utils/api.js"; // hämtar en funfion getEvents från api.js
+import { getEvents } from "../api.js"; // hämtar en funfion getEvents från api.js
 
 export default async function loadStart() { //skapar funktionen LoadStart
   const events = await getEvents(); //hämtar alla events från getEvents funktionen och sparar dem i variabeln events
