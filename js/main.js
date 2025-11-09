@@ -5,6 +5,7 @@ import loadJazzCorner from './pages/jazz-corner.js';
 import loadGiggleGalaxy from './pages/giggle-galaxy.js';
 import loadRallyHouse from './pages/rally-house.js'; // importerar alla sidor och returnerar HTML innehåll
 
+import clubInfoAndEvents from './utils/club-info-and-events.js'; //importer funktionen clubInfoAndEvents
 
 // Our menu: label to display in menu and 
 // function to run on menu choice
@@ -26,14 +27,24 @@ function createMenu() { //funktion som skapar menyn och returnerar en html strä
 }
 
 async function loadPageContent() {
-  if (location.hash === '') { location.replace('#start'); 
+  if (!location.hash) {
+     location.replace('#start');
+    return;
+}
+    
     const key = location.hash.slice(1);
     const pageFunction = menu[key].function;
+   
     const html = await pageFunction();
     document.querySelector('main').innerHTML = html;
- }
- 
 }
+ //call loadPageContent once on page load
+   document.querySelector('header nav').innerHTML = createMenu();
+  loadPageContent();
+  window.onhashchange = loadPageContent;
+
+
+
  
  
  
@@ -46,9 +57,6 @@ async function loadPageContent() {
   // replace the contents of the main element
   document.querySelector('main').innerHTML = html;
 }
-
-// call loadPageContent once on page load
-loadPageContent();
 
 // and then on every hash change of the url/location
 window.onhashchange = loadPageContent;
