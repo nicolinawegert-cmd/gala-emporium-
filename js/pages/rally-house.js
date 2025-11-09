@@ -33,10 +33,12 @@
             <h3>song title</h3>
             </article>
             <article>
-            <h2>bomb</h2>
+            <h2>artists</h2>
+            <h3>song title</h3>
             </article>
             <article>
-            <h2>bomb</h2>
+            <h2>artists</h2>
+            <h3>song title</h3>
             </article>
         </div>
 
