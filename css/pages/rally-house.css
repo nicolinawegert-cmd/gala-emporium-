@@ -1,0 +1,37 @@
+.fjalla-one-regular {
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+    background: url(https://images.steamusercontent.com/ugc/927052267576803471/2385C4C29F428A972318B8C881D70CE8F436758B/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false);
+    background-size: cover;
+    justify-content: space-evenly;
+    display: flex;
+
+    font-family: "Fjalla One", sans-serif;
+
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    h2{
+            padding-left: 75%;
+            padding-bottom: 25%;
+    }
+}
+
+#main{
+    background-color: rgba(250, 215, 236, 0.75);
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 50%;
+    border: 5px solid #670000;
+
+    h1{
+        color: #670000;
+        font-size: 50px;
+    }
+}
