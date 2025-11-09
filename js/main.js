@@ -3,7 +3,7 @@ import loadBooking from './booking.js';
 import loadPulseRoom from './pages/the-pulse-room.js';
 import loadJazzCorner from './pages/jazz-corner.js';
 import loadGiggleGalaxy from './pages/giggle-galaxy.js';
-import loadRallyHouse from './pages/rally-house.js';
+import loadRallyHouse from './pages/rally-house.js'; // importerar alla sidor och returnerar HTML innehåll
 
 
 // Our menu: label to display in menu and 
@@ -17,10 +17,7 @@ const menu = {
   "booking": { label: 'Booking', function: loadBooking },
 };
 
-function createMenu() {
-  // Object.entries -> convert object to array
-  // then map to create a-tags (links)
-  // then join everything into one big string
+function createMenu() { //funktion som skapar menyn och returnerar en html sträng object.entries gör om meny till en array .map går igenom varje element i arrayen och skapar en länk för varje meny objekt.
   return Object.entries(menu)
     .map(([urlHash, { label }]) => `
       <a href="#${urlHash}">${label}</a>
@@ -29,9 +26,18 @@ function createMenu() {
 }
 
 async function loadPageContent() {
-  // if no hash redirect to #start
-  if (location.hash === '') { location.replace('#start'); }
-  // add a class on body so that we can style differnt pages differently
+  if (location.hash === '') { location.replace('#start'); 
+    const key = location.hash.slice(1);
+    const pageFunction = menu[key].function;
+    const html = await pageFunction();
+    document.querySelector('main').innerHTML = html;
+ }
+ 
+}
+ 
+ 
+ 
+ /*   // add a class on body so that we can style differnt pages differently
   document.body.setAttribute('class', location.hash.slice(1));
   // get the correct function to run depending on location.hash
   const functionToRun = menu[location.hash.slice(1)].function;
@@ -48,4 +54,5 @@ loadPageContent();
 window.onhashchange = loadPageContent;
 
 // create the menu and display it
-document.querySelector('header nav').innerHTML = createMenu();
+document.querySelector('header nav').innerHTML = createMenu();*/
+// add a class on body so that we can style differnt pages differently
