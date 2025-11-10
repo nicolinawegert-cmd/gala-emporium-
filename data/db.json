@@ -1,5 +1,12 @@
 {
+  "passwords":[
+    {
+      "password": "Hqqp123!" 
+    }
+  ],
+
   "clubs": [
+
     {
       "id": "gg01",
       "name": "Giggle Galaxy",
@@ -8,7 +15,7 @@
     {
       "id": "hh72",
       "name": "Rally House",
-      "description": "Rally House - nostalgic house music based on the play station one racing games of the early two thousands. \n\n Founded by a mysterious figure only known as prod. DTM. Rally house is a place to relax and bop to dj sets that remind you of childhood"
+      "description": "Rally House - nostalgic house music based on the play station two racing games of the early two thousands. \n\n Founded by a mysterious figure only known as prod. DTM. Rally house is a place to relax and bop to dj sets that remind you of childhood"
     },
     {
       "id": "a37c",
@@ -34,21 +41,21 @@
       "title": "Open Mic Night",
       "date": "2025-11-17",
       "time": "18:30",
-      "clubId": "bb835"
+      "clubId": "aa220"
     },
     {
       "id": 3,
       "title": "The Laugh Battle",
       "date": "2025-11-24",
       "time": "20:00",
-      "clubId": "cc654"
+      "clubId": "aa220"
     },
     {
       "id": 4,
       "title": "Improv in space",
       "date": "2025-12-01",
       "time": "19:30",
-      "clubId": "dd256"
+      "clubId": "aa220"
     },
     {
       "id": 5,

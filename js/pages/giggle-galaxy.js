@@ -1,4 +1,15 @@
-  export default async function loadGiggleGalaxy() {
+import { getClub, getEvents } from "../api.js";
+
+export default async function loadGiggleGalaxy() {
+    const clubId = "gg01";
+
+    const club = await getClub(clubId);
+    const events = await getEvents(clubId);
+
+    return `
+
+
+export default async function loadGiggleGalaxy() {
       const main = document.querySelector("main");
 
       const link = document.createElement("link");
@@ -40,7 +51,7 @@
     const events = await response.json();
 
     // Filter events that belong to Giggle Galaxy
-    const giggleEvents = events.filter(event => event.club === "Giggle Galaxy");
+    const giggleEvents = events.filter(event => event.clubId === "aa220");
 
     // Check if events exist
     if (giggleEvents.length > 0) {
