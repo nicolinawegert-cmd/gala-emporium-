@@ -1,9 +1,9 @@
-@import 'css/pages/the-pulse-room.css';
-@import 'css/pages/jazz-corner.css';
-@import 'css/pages/giggle-galaxy.css';
-@import 'css/pages/rally-house.css';
-@import 'css/pages/moose-vibes.css';
-@import 'css/pages/start-page.css';
+@import '../pages/the-pulse-room.css';
+@import '../pages/jazz-corner.css';
+@import '../pages/giggle-galaxy.css';
+@import '../pages/rally-house.css';
+@import '../pages/moose-vibes.css';
+@import '../pages/start-page.css';
 
 :root {
   --primary: #e91e63;
