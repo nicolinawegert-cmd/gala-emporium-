@@ -46,10 +46,6 @@
         }).join("");
             return html;
         };
-        
-        function createEvent(){
-
-        }
 
     return `    <form id="myForm">
         <p>Username</p>
@@ -127,8 +123,6 @@ export async function functions(){
             console.log("DOM test");
             return `
             <form id="myForm">
-            <p>Club</p>
-            <input id="clubInput" type="text" />
             <p>Date</p>
             <input id="dateInput" type="text" />
             <p>Time</p>
@@ -137,7 +131,6 @@ export async function functions(){
             <input id="titleInput" type="text" />
             </form>
             <button id="button" type="button">Submit</button>`
-
         };
 
         function adminFunc(){
@@ -145,9 +138,36 @@ export async function functions(){
                 admin = true;
 
                 document.getElementById("adminOnly").innerHTML = toReturnAdmin();
+
+                document.getElementById("button").addEventListener("click", () => {
+                    const date = document.getElementById("dateInput").value;
+                    const time = document.getElementById("timeInput").value;
+                    const title = document.getElementById("titleInput").value;
+
+                    createEvent(title, date, time, "hh72");
+                });
             }
         }
-        
+
+        function createEvent(title, date, time, clubId){
+            fetch("http://localhost:3000/events", {
+                method: "POST",   body: JSON.stringify({
+                clubId: clubId,
+                date: date,
+                time: time,
+                title: title
+                })
+                })
+                .then(response => response.json())
+                .then(data => {
+                console.log("Added new club:", data);
+                })
+                .catch(error => console.error("Error:", error));
+                            
+
+        }
 }
+        
+
 
     
