@@ -10,9 +10,8 @@
         const events = await response.json();
         const clubs = await clubsResponse.json();
         const password = await passwordResponse.json();
-        htmlToReturn = "";
 
-        htmlToReturn = `    <form id="myForm">
+        let htmlToReturn = `    <form id="myForm">
         <p>Username</p>
         <input id="firstInput" type="text" />
         <p>password</p>
@@ -60,7 +59,7 @@
 
         htmlToReturn += (function toReturnExplanation()
         {
-            html = "";
+            let html = "";
 
             html = clubs.map(({id, description}) => { if(id == "hh72") { return `
             <h3>${description}</h3>
