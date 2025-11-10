@@ -10,7 +10,7 @@
         const events = await response.json();
         const clubs = await clubsResponse.json();
         const password = await passwordResponse.json();
-        htmlToReturn;
+        htmlToReturn = "";
 
         htmlToReturn = `    <form id="myForm">
         <p>Username</p>
@@ -117,6 +117,7 @@
             }
         }   
 
+        /*
         document.getElementById("firstInput").addEventListener("keydown", (event) => {
             if (event.key === "Enter") {
                 event.preventDefault();
@@ -134,7 +135,7 @@
             }
         
         });
-
+        */
         return htmlToReturn;
 
 }
