@@ -37,21 +37,7 @@ async function loadPageContent() {
     const pageFunction = menu[key].function;
    
     const html = await pageFunction();
-    document.querySelector('main').innerHTML = `<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gala Emporium</title>
-  <link rel="stylesheet" href="css/utils/style.css">
-  <script type="module" src="js/main.js" defer></script>
-</head>
-
-<body>
-  ${html}
-</body>
-
-</html>`;
+    document.querySelector('#page-container').innerHTML = html;;
 }
  //call loadPageContent once on page load
    document.querySelector('header nav').innerHTML = createMenu();
