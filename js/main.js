@@ -3,11 +3,10 @@ import loadBooking from './booking.js';
 import loadPulseRoom from './pages/the-pulse-room.js';
 import loadJazzCorner from './pages/jazz-corner.js';
 import loadGiggleGalaxy from './pages/giggle-galaxy.js';
-import loadRallyHouse from './pages/rally-house.js';
+//import loadRallyHouse from './pages/rally-house.js';
 import loadAdmin from './admin.js';
-//import loadRallyHouse from './pages/rally-house.js'; // importerar alla sidor och returnerar HTML innehåll
 
-import clubInfoAndEvents from './utils/club-info-and-events.js'; //importer funktionen clubInfoAndEvents
+
 
 // Our menu: label to display in menu and 
 // function to run on menu choice
@@ -45,24 +44,3 @@ async function loadPageContent() {
   loadPageContent();
   window.onhashchange = loadPageContent;
 
-
-
- 
- 
- 
- /*   // add a class on body so that we can style differnt pages differently
-  document.body.setAttribute('class', location.hash.slice(1));
-  // get the correct function to run depending on location.hash
-  const functionToRun = menu[location.hash.slice(1)].function;
-  // run the function and expect it return a html string
-  const html = await functionToRun();
-  // replace the contents of the main element
-  document.querySelector('main').innerHTML = html;
-}
-
-// and then on every hash change of the url/location
-window.onhashchange = loadPageContent;
-
-// create the menu and display it
-document.querySelector('header nav').innerHTML = createMenu();*/
-// add a class on body so that we can style differnt pages differently
