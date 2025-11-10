@@ -11,53 +11,8 @@
         const clubs = await clubsResponse.json();
         const password = await passwordResponse.json();
 
-        let htmlToReturn = `    <form id="myForm">
-        <p>Username</p>
-        <input id="firstInput" type="text" />
-        <p>password</p>
-        <input id="secondInput" type="text" />
-    </form>
 
-    <div id="main">
-        <h1>The Rally House</h1>
-            <div id="explanation">
-        
-        </div>
-        <div id="songs">
-            <article>
-            <h2>artists</h2>
-            <h3>song title</h3>
-            </article>
-            <article>
-            <h2>artists</h2>
-            <h3>song title</h3>
-            </article>
-            <article>
-            <h2>artists</h2>
-            <h3>song title</h3>
-            </article>
-        </div>
-
-        <div id="events">
-
-        </div>
-
-        <div id="booking">
-            
-        </div>
-
-        <div id="createEvent">
-            
-        </div>
-
-        <div id="adminOnly">
-            
-        </div>
-
-    </div>`;
-
-
-        htmlToReturn += (function toReturnExplanation()
+        function toReturnExplanation()
         {
             let html = "";
 
@@ -72,9 +27,9 @@
         }
         }).join("");
         return html;
-        })();
+        };
 
-        htmlToReturn += (function toReturnEvents(){
+        function toReturnEvents(){
             let html = ""; 
 
             html = events.map(({clubId, time, date, title}) => { if(clubId == "hh72") { return `
@@ -92,9 +47,9 @@
         }
         }).join("");
             return html;
-        })();
+        };
 
-        htmlToReturn += (function toReturnAdmin(){
+        function toReturnAdmin(){
             return ` <h2>New Entry</h2>
             <form id="myForm">
             <p>Club</p>
@@ -108,7 +63,7 @@
             </form>
             <button id="button" type="text"> </button>`
 
-        })();
+        };
 
         function adminFunc(){
             if(userName == "admin" && passwordString == password.password){
@@ -135,7 +90,52 @@
         
         });
         */
-        return htmlToReturn;
+    return `    <form id="myForm">
+        <p>Username</p>
+        <input id="firstInput" type="text" />
+        <p>password</p>
+        <input id="secondInput" type="text" />
+    </form>
+
+    <div id="main">
+        <h1>The Rally House</h1>
+        <div id="explanation">
+            <h3>
+                ${toReturnExplanation()}
+            </h3>
+        </div>
+        <div id="songs">
+            <article>
+            <h2>artists</h2>
+            <h3>song title</h3>
+            </article>
+            <article>
+            <h2>artists</h2>
+            <h3>song title</h3>
+            </article>
+            <article>
+            <h2>artists</h2>
+            <h3>song title</h3>
+            </article>
+        </div>
+
+        <div id="events">
+            ${toReturnEvents()}
+        </div>
+
+        <div id="booking">
+            
+        </div>
+
+        <div id="createEvent">
+            
+        </div>
+
+        <div id="adminOnly">
+           ${toReturnAdmin()}
+        </div>
+
+    </div>`;
 
 }
 
