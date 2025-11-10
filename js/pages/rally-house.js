@@ -1,9 +1,7 @@
     
-    import { getClub, getEvents } from "../api.js";
-
-        let admin = false;
-        let userName = "";
-        let password = "";
+    let admin = false;
+    let userName = "";
+    let passwordString = "";
     
     export default async function loadRallyHouse() {
         const response = await fetch("http://localhost:3000/events");
@@ -60,7 +58,7 @@
     </div>`;
 
 
-        htmlToReturn = function toReturnExplanation()
+        htmlToReturn += (function toReturnExplanation()
         {
             html = "";
 
@@ -75,9 +73,9 @@
         }
         }).join("");
         return html;
-        }
+        })();
 
-        htmlToReturn = function toReturnEvents(){
+        htmlToReturn += (function toReturnEvents(){
             let html = ""; 
 
             html = events.map(({clubId, time, date, title}) => { if(clubId == "hh72") { return `
@@ -95,9 +93,9 @@
         }
         }).join("");
             return html;
-        };
+        })();
 
-        htmlToReturn = function toReturnAdmin(){
+        htmlToReturn += (function toReturnAdmin(){
             return ` <h2>New Entry</h2>
             <form id="myForm">
             <p>Club</p>
@@ -111,10 +109,10 @@
             </form>
             <button id="button" type="text"> </button>`
 
-        }
+        })();
 
         function adminFunc(){
-            if(userName == "admin" && password == password.password){
+            if(userName == "admin" && passwordString == password.password){
                 admin = true;
             }
         }   
@@ -131,7 +129,7 @@
         document.getElementById("secondInput").addEventListener("keydown", (event) => {
             if (event.key === "Enter") {
                 event.preventDefault();
-                password = event.target.value;
+                passwordString = event.target.value;
                 adminFunc();
             }
         
