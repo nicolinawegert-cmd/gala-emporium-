@@ -17,7 +17,7 @@ const menu = {
   "rally-house": { label: 'Rally-house', function: loadRallyHouse },
   "the-pulse-room": { label: 'The-pulse-room', function: loadPulseRoom },
   "booking": { label: 'Booking', function: loadBooking },
-  "admin": {label: 'Admin', function: loadAdmin },
+  "admin": { label: 'Admin', function: loadAdmin },
 };
 
 function createMenu() { //funktion som skapar menyn och returnerar en html sträng object.entries gör om meny till en array .map går igenom varje element i arrayen och skapar en länk för varje meny objekt.
@@ -37,7 +37,21 @@ async function loadPageContent() {
     const pageFunction = menu[key].function;
    
     const html = await pageFunction();
-    document.querySelector('main').innerHTML = html;
+    document.querySelector('main').innerHTML = `<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gala Emporium</title>
+  <link rel="stylesheet" href="css/utils/style.css">
+  <script type="module" src="js/main.js" defer></script>
+</head>
+
+<body>
+  ${html}
+</body>
+
+</html>`;
 }
  //call loadPageContent once on page load
    document.querySelector('header nav').innerHTML = createMenu();
