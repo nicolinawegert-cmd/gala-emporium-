@@ -1,15 +1,11 @@
     
     import { getClub, getEvents } from "../api.js";
-    
-    document.addEventListener("DOMContentLoaded", () => {
-        load();
-    });
 
         let admin = false;
         let userName = "";
         let password = "";
     
-    async function load() {
+    export default async function loadRallyHouse() {
         const response = await fetch("http://localhost:3000/events");
         const clubsResponse = await fetch("http://localhost:3000/clubs");
         const passwordResponse = await fetch("http://localhost:3000/passwords");
