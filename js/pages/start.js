@@ -1,10 +1,31 @@
-import clubInfoAndEvents from "../utils/club-info-and-events.js";
+import { getEvents } from "../api.js"; // hämtar en funfion getEvents från api.js
 
-export default async function start() {
-  const eventHtml = await clubInfoAndEvents();
-  return `
-    <h1>Alla kommande events på Gala</h1>
-    <p>Gala är en samlingsplats för olika musikklubbar.</p>
-    ${eventHtml}
-  `;
-}
+export default async function loadStart() { //skapar funktionen LoadStart
+  const events = await getEvents(); //hämtar alla events från getEvents funktionen och sparar dem i variabeln events
+ 
+  const upcoming = events 
+  .sort ((a, b) => new Date(a.date) - new Date(b.date)) //sorterar events efter datum i stigande ordning
+  .slice(0, 6); //tar de 6 första eventsen från den sorterade listan
+
+    return `
+    <section class="hero-antique">
+        <div class="hero-overlay"></div>
+        <h1 class="hero-title">Gala Emporium</h1>
+        <p class="hero-subtitle">Where Elegance Meets Performance</p>
+    </section>
+
+    <section class="grand-events">
+        <h2 class="section-title">Kommande Framträdanden</h2>
+
+        <div class="event-posters">
+            ${upcoming.map(ev => `
+                <article class="event-poster">
+                    <h3>${ev.title}</h3>
+                    <p class="event-date">${ev.date} • ${ev.time ?? ""}</p>
+                    <a href="#${ev.clubId}" class="event-link">Till klubb →</a>
+                </article>
+            `).join("")}
+        </div>
+    </section>
+`;
+            }

@@ -1,7 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+
 .fjalla-one-regular {
   font-family: "Fjalla One", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    p{
+        color: #fff;
+    }
 }
 
 body{
@@ -9,29 +20,74 @@ body{
     background-size: cover;
     justify-content: space-evenly;
     display: flex;
+    flex-wrap: wrap;
 
     font-family: "Fjalla One", sans-serif;
 
 }
 
-article{
-    display: flex;
-    flex-direction: column;
-    h2{
-            padding-left: 75%;
-            padding-bottom: 25%;
-    }
-}
-
 #main{
     background-color: rgba(250, 215, 236, 0.75);
+    border: 5px solid #670000;
     padding-left: 20%;
     padding-right: 20%;
-    padding-bottom: 50%;
-    border: 5px solid #670000;
+    padding-bottom: 30%;
+    text-align: center;
+
+    width: 60%;           /* prevent stretching */
+    margin: 0 auto;        /* center it */
+    padding: 2%;         /* keep internal spacing consistent */
+
+    box-sizing: border-box; /* ensures padding doesn’t add to width */
 
     h1{
         color: #670000;
         font-size: 50px;
     }
+}
+
+#songs{
+    article{
+        flex-direction: column;
+    }
+}
+
+#events{
+    display: flex;
+
+    padding-top: 15%;
+
+    /*chat gpt */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 5%; /* spacing between events */
+    justify-items: center; /* optional: center content */
+    margin-top: 7%;
+
+}
+
+article{
+    padding-left: 5%;
+    padding-right: 5%;
+    border: 2px solid #670000;
+    border-radius: 10px;
+}
+
+@media (max-width: 570px){
+    #main{
+        width: 90%;           /* prevent stretching */
+    }
+
+}
+
+@media (max-width: 279px){
+    #events {
+    grid-template-columns: repeat(2, 1fr); /* only 2 columns on small screens */
+  }
+}
+
+@media (max-width: 191px){
+    #events {
+    grid-template-columns: repeat(1, 1fr); /* only 2 columns on small screens */
+  }
 }
