@@ -1,3 +1,6 @@
+    
+    import { getClub, getEvents } from "../api.js";
+    
     document.addEventListener("DOMContentLoaded", () => {
         load();
     });
