@@ -37,7 +37,7 @@ async function loadPageContent() {
     const pageFunction = menu[key].function;
    
     const html = await pageFunction();
-    document.querySelector('#page-container').innerHTML = html;;
+    document.querySelector('#page-container').innerHTML = html;
 }
  //call loadPageContent once on page load
    document.querySelector('header nav').innerHTML = createMenu();
