@@ -12,9 +12,9 @@
         const events = await response.json();
         const clubs = await clubsResponse.json();
         const password = await passwordResponse.json();
+        htmlToReturn;
 
-        document.querySelector("body").innerHTML = "";
-        document.querySelector("body").innerHTML = `    <form id="myForm">
+        htmlToReturn = `    <form id="myForm">
         <p>Username</p>
         <input id="firstInput" type="text" />
         <p>password</p>
@@ -60,7 +60,7 @@
     </div>`;
 
 
-        function toReturnExplanation()
+        htmlToReturn = function toReturnExplanation()
         {
             html = "";
 
@@ -77,7 +77,7 @@
         return html;
         }
 
-        function toReturnEvents(){
+        htmlToReturn = function toReturnEvents(){
             let html = ""; 
 
             html = events.map(({clubId, time, date, title}) => { if(clubId == "hh72") { return `
@@ -97,7 +97,7 @@
             return html;
         };
 
-        function toReturnAdmin(){
+        htmlToReturn = function toReturnAdmin(){
             return ` <h2>New Entry</h2>
             <form id="myForm">
             <p>Club</p>
@@ -111,17 +111,6 @@
             </form>
             <button id="button" type="text"> </button>`
 
-        }
-
-        document.querySelector("#explanation").innerHTML = toReturnExplanation();
-        document.querySelector("#events").innerHTML = toReturnEvents();
-        if(admin)
-        {
-            document.querySelector("#adminOnly").innerHTML = toReturnAdmin();
-        }
-        else
-        {
-            document.querySelector("#adminOnly").innerHTML = "";
         }
 
         function adminFunc(){
@@ -147,6 +136,9 @@
             }
         
         });
+
+        return htmlToReturn;
+
 }
 
     
