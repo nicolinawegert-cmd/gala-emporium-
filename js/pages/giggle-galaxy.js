@@ -1,4 +1,15 @@
-  export default async function loadGiggleGalaxy() {
+import { getClub, getEvents } from "../api.js";
+
+export default async function loadGiggleGalaxy() {
+    const clubId = "gg01";
+
+    const club = await getClub(clubId);
+    const events = await getEvents(clubId);
+
+    return `
+
+
+export default async function loadGiggleGalaxy() {
       const main = document.querySelector("main");
 
       const link = document.createElement("link");
