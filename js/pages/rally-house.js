@@ -6,10 +6,8 @@
     export default async function loadRallyHouse() {
         const response = await fetch("http://localhost:3000/events");
         const clubsResponse = await fetch("http://localhost:3000/clubs");
-        const passwordResponse = await fetch("http://localhost:3000/passwords");
         const events = await response.json();
         const clubs = await clubsResponse.json();
-        const password = await passwordResponse.json();
 
 
         function toReturnExplanation()
@@ -48,48 +46,11 @@
         }).join("");
             return html;
         };
-
-        function toReturnAdmin(){
-            return ` <h2>New Entry</h2>
-            <form id="myForm">
-            <p>Club</p>
-            <input id="clubInput" type="text" />
-            <p>Date</p>
-            <input id="dateInput" type="text" />
-            <p>Time</p>
-            <input id="timeInput" type="text" />
-            <p>Title</p>
-            <input id="titleInput" type="text" />
-            </form>
-            <button id="button" type="text"> </button>`
-
-        };
-
-        function adminFunc(){
-            if(userName == "admin" && passwordString == password.password){
-                admin = true;
-            }
-        }   
-
-        /*
-        document.getElementById("firstInput").addEventListener("keydown", (event) => {
-            if (event.key === "Enter") {
-                event.preventDefault();
-                userName = event.target.value;
-                adminFunc();
-            }
         
-        });
+        function createEvent(){
 
-        document.getElementById("secondInput").addEventListener("keydown", (event) => {
-            if (event.key === "Enter") {
-                event.preventDefault();
-                passwordString = event.target.value;
-                adminFunc();
-            }
-        
-        });
-        */
+        }
+
     return `    <form id="myForm">
         <p>Username</p>
         <input id="firstInput" type="text" />
@@ -132,11 +93,61 @@
         </div>
 
         <div id="adminOnly">
-           ${toReturnAdmin()}
+
         </div>
 
     </div>`;
 
+}
+
+export async function functions(){
+
+        const passwordResponse = await fetch("http://localhost:3000/passwords");
+        const password = await passwordResponse.json();
+
+        document.getElementById("firstInput").addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                userName = event.target.value;
+                adminFunc();
+            }
+        
+        });
+
+        document.getElementById("secondInput").addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                passwordString = event.target.value;
+                adminFunc();
+            }
+        
+        });
+
+        function toReturnAdmin(){
+            console.log("DOM test");
+            return `
+            <form id="myForm">
+            <p>Club</p>
+            <input id="clubInput" type="text" />
+            <p>Date</p>
+            <input id="dateInput" type="text" />
+            <p>Time</p>
+            <input id="timeInput" type="text" />
+            <p>Title</p>
+            <input id="titleInput" type="text" />
+            </form>
+            <button id="button" type="button">Submit</button>`
+
+        };
+
+        function adminFunc(){
+            if(userName == "admin" && passwordString == password[0].password){
+                admin = true;
+
+                document.getElementById("adminOnly").innerHTML = toReturnAdmin();
+            }
+        }
+        
 }
 
     
