@@ -2,6 +2,7 @@
     let admin = false;
     let userName = "";
     let passwordString = "";
+    import createEvent from '../main.js';
     
     export default async function loadRallyHouse() {
         const response = await fetch("http://localhost:3000/events");
@@ -149,23 +150,6 @@ export async function functions(){
             }
         }
 
-        function createEvent(title, date, time, clubId){
-            fetch("http://localhost:3000/events", {
-                method: "POST",   body: JSON.stringify({
-                clubId: clubId,
-                date: date,
-                time: time,
-                title: title
-                })
-                })
-                .then(response => response.json())
-                .then(data => {
-                console.log("Added new club:", data);
-                })
-                .catch(error => console.error("Error:", error));
-                            
-
-        }
 }
         
 

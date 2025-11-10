@@ -46,3 +46,21 @@ async function loadPageContent() {
   loadPageContent();
   window.onhashchange = loadPageContent;
 
+  export default function createEvent(title, date, time, clubId){
+    fetch("http://localhost:3000/events", {
+        method: "POST", body: JSON.stringify({
+        clubId: clubId,
+        date: date,
+        time: time,
+        title: title
+        })
+        })
+        .then(response => response.json())
+        .then(data => {
+        console.log("Added new club:", data);
+        })
+        .catch(error => console.error("Error:", error));
+                    
+
+}
+
