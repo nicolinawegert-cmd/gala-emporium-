@@ -51,7 +51,7 @@ export default async function loadGiggleGalaxy() {
     const events = await response.json();
 
     // Filter events that belong to Giggle Galaxy
-    const giggleEvents = events.filter(event => event.club === "Giggle Galaxy");
+    const giggleEvents = events.filter(event => event.clubId === "aa220");
 
     // Check if events exist
     if (giggleEvents.length > 0) {
