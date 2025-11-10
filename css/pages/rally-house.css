@@ -94,13 +94,13 @@ article{
 
 }
 
-@media (max-width: 279px){
+@media (max-width: 364px){
     #events {
     grid-template-columns: repeat(2, 1fr); /* only 2 columns on small screens */
   }
 }
 
-@media (max-width: 191px){
+@media (max-width: 238px){
     #events {
     grid-template-columns: repeat(1, 1fr); /* only 2 columns on small screens */
   }
