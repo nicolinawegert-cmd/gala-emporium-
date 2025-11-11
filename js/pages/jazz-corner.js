@@ -8,23 +8,35 @@ export default async function loadJazzCorner() {
     ]);
     document.body.className = "Jazz-corner";
  
-     const top4 = (events || []).slice(0, 4)
+     const top4 = (events || [])
+    .slice(0, 4)
     .map(ev => `
-      <div>
-        <h3>${ev.title}</h3>
-        <p>${ev.date ?? ''}</p>
-        <p>${ev.description ?? ''}</p>
-        <a href="#booking" data-route="booking">Boka</a>
-      </div>
+      <article class="event-card">
+        <h3 class="event-cardTitle">${ev.title}</h3>
+        <p class="event-cardDate">${ev.date ?? ''}</p>
+        <p class="event-cardDesc">${ev.description ?? ''}</p>
+        <a class="event-cardCta" href="#booking" data-route="booking">Boka</a>
+      </article>
     `).join('');
 
 return `
-    <h1>${club.name}</h1>
-    <p>${club.description}</p>
-
-    <h2>Fyra jazzkvällar</h2>
-    <div>
-      ${top4}
-    </div>
+    <section class="page jazz-corner">
+    <header class="page-header">
+      <h1 class="page-title">${club.name}</h1>
+      <p class="page-tagline">${club.description}</p>
+      </header>
+      
+    <section class="events">
+      <h2 class="events__heading">Fyra jazzkvällar</h2>
+      <div class="events-grid">
+        ${top4}
+      </div>
+      </section>
+  
+  <footer>
+    <p>&copy; Jazz Corner 2025</p>
+  </footer>
+  </section>
+   
   `;
-}
+    }
