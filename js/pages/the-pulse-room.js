@@ -6,10 +6,9 @@ export default async function loadPulseRoom() {
     const club = await getClub(clubId);
     const events = await getEvents(clubId);
 
-    // Behåll andra klasser på body och lägg bara till denna
     document.body.classList.add("the-pulse-room");
 
-    return `
+   const html = `
         <header class="pulse-header">
             <h1 class="pulse-title">${club.name}</h1>
             <p class="pulse-tagline">${club.description}</p>
@@ -26,6 +25,13 @@ export default async function loadPulseRoom() {
                             <summary>Mer info</summary>
                             <p>${ev.description}</p>
                         </details>
+                        <button 
+                            class="book-event-btn" 
+                            data-club="${clubId}" 
+                            data-id="${ev.id}"
+                            data-title="${ev.title}">
+                            Book Event
+                        </button>
                     </article>
                 `).join("")}
             </section>
@@ -45,4 +51,18 @@ export default async function loadPulseRoom() {
             </footer>
         </main>
     `;
+
+    setTimeout(() => {
+        document.querySelectorAll(".book-event-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+
+                localStorage.setItem("preselectClub", btn.dataset.club);
+                localStorage.setItem("preselectEvent", btn.dataset.id);
+
+                window.location.hash = "#booking";
+            });
+        });
+    }, 0);
+
+    return html;
 }
