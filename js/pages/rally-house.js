@@ -9,10 +9,10 @@
         const clubsResponse = await fetch("http://localhost:3000/clubs");
         const events = await response.json();
         const clubs = await clubsResponse.json();
+        
         document.body.className = "rally-house";
 
-
-        function toReturnExplanation()
+    function toReturnExplanation()
         {
             let html = "";
 
@@ -29,7 +29,26 @@
         return html;
         };
 
-        function toReturnEvents(){
+    function toReturnSongs(){
+        let html = "";
+        let artists = ["PXRKX", "prod. DTM", "prey, staplegun"];
+        let songNames = ["Marlboro Club", "Rally House", "Bring it!"];
+        let songs = ["MARLBORO CLUB 4.mp3", "RALLY HOUSE 4.mp3", "Bring it!.mp3"];
+
+        for(let i = 0; i < 3; i++){
+            html += `<article class="rally-house starterSongs" data-src="songs/${songs[i]}">
+            <h2>${artists[i]}</h2>
+            <h3>${songNames[i]}</h3>
+            <span class="material-symbols-outlined">
+            play_circle
+            </span>
+            </article>`;
+        }
+
+        return html;
+    }
+
+    function toReturnEvents(){
             let html = ""; 
 
             html = events.map(({clubId, time, date, title}) => { if(clubId == "hh72") { return `
@@ -49,7 +68,7 @@
             return html;
         };
 
-    return `    <form id="myForm">
+return `    <form id="myForm">
         <p>Username</p>
         <input id="firstInput" type="text" />
         <p>password</p>
@@ -64,39 +83,11 @@
             </h3>
         </div>
         <div id="songs">
-            <article class="rally-house starterSongs">
-            <h2>PXRKX</h2>
-            <h3>Marlboro Club</h3>
-            <span class="material-symbols-outlined">
-            play_circle
-            </span>
-            </article>
-            <article class="rally-house starterSongs">
-            <h2>prod. DTM</h2>
-            <h3>Rally House</h3>
-            <span class="material-symbols-outlined">
-            play_circle
-            </span>
-            </article>
-            <article class="rally-house starterSongs">
-            <h2>-prey, staplegun</h2>
-            <h3>Bring it!</h3>
-            <span class="material-symbols-outlined">
-            play_circle
-            </span>
-            </article>
+            ${toReturnSongs()}
         </div>
 
         <div id="events">
             ${toReturnEvents()}
-        </div>
-
-        <div id="booking">
-            
-        </div>
-
-        <div id="createEvent">
-            
         </div>
 
         <div id="adminOnly">
@@ -128,6 +119,35 @@ export async function functions(){
                 adminFunc();
             }
         
+        });
+
+        let audioPlaying = null;
+
+        document.querySelectorAll(".material-symbols-outlined").forEach((icon) => {
+        // find the closest parent with the data-src attribute
+        const songSrc = icon.closest("[data-src]")?.dataset.src;
+        if (!songSrc) return;
+
+        const audio = new Audio(songSrc);
+
+        icon.addEventListener("click", () => {
+            // pause currently playing song if another starts
+            if (audioPlaying && audioPlaying !== audio) {
+            audioPlaying.pause();
+            }
+
+            // toggle play/pause
+            if (audio.paused) {
+            audio.play();
+            icon.textContent = "pause_circle";
+            audioPlaying = audio;
+            console.log("Playing:", songSrc);
+            } else {
+            audio.pause();
+            icon.textContent = "play_circle";
+            console.log("Paused:", songSrc);
+            }
+        });
         });
 
         function toReturnAdmin(){
