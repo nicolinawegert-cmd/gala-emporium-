@@ -31,7 +31,7 @@ export default async function loadAdmin() {
       <div class="event-card">
         <h3>${event.title}</h3>
         <p>${event.date} - ${event.time}</p>
-        <p><strong>Club:</strong> ${event.clubId}</p>
+        <p><strong>ClubId:</strong> ${event.clubId}</p>
         <button class="edit-btn" data-id="${event.id}">Edit</button>
         <button class="delete-btn" data-id="${event.id}">Delete</button>
       </div>
