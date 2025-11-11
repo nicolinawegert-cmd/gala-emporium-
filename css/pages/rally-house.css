@@ -51,12 +51,21 @@ body.rally-house{
         color: #670000;
         font-size: 50px;
     }
+
+    h2{
+        color: #c1006d;
+    }
+
+    h3{
+        color: #555;
+    }
 }
 
 #songs{
     article{
         flex-direction: column;
     }
+
 }
 
 #events{
