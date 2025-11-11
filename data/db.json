@@ -87,6 +87,7 @@
       "title": "Miles Davis Tribute",
       "date": "2025-11-10",
       "time": "20:00",
+      "img": "/assets/images/miles.jpg",
       "clubId": "a37c",
       "description": "En kväll dedikerad till Miles Davis, där vi utforskar hans banbrytande verk och inflytande på jazzhistorien."
    },
@@ -95,6 +96,7 @@
       "title": "Ella Fitzgerald Night",
       "date": "2025-11-17",
       "time": "20:00",
+      "img": "/assets/images/ella.jpg",
       "clubId": "a37c",
       "description": "En varm och svängig kväll där vi firar Ella Fitzgeralds tidlösa röst och hennes mest älskade klassiker."
     },
@@ -103,6 +105,7 @@
       "title": "John Coltrane Celebration",
       "date": "2025-11-24",
       "time": "20:00",
+      "img": "/assets/images/coltrane.jpg",
       "clubId": "a37c",
       "description": "En intensiv hyllning till John Coltranes mästerliga saxofonspel och hans spirituella jazzkompositioner."
     },
@@ -111,6 +114,7 @@
       "title": "Loius Armstrong Tribute",
       "date": "2025-11-28",
       "time": "22:00",
+      "img": "/assets/images/armstrong.jpg",
       "description": "En kväll fylld med retro-futuristiska beats och neonljus som tar dig tillbaka till 80-talets synthwave-era.",
       "clubId": "a37c"
       

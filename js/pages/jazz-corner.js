@@ -8,9 +8,10 @@ export default async function loadJazzCorner() {
     ]);
      document.body.className = "jazz-corner";
 
-  // Första två till vänster, nästa två till höger
+
   const leftEvents = (events || []).slice(0, 2).map(ev => `
     <article class="event-card">
+    <img src="${ev.img}" alt="${ev.title}">
       <h3>${ev.title}</h3>
       <p>${ev.date ?? ''}</p>
       <p>${ev.description ?? ''}</p>
@@ -19,6 +20,7 @@ export default async function loadJazzCorner() {
 
   const rightEvents = (events || []).slice(2, 4).map(ev => `
     <article class="event-card">
+    <img src="${ev.img}" alt="${ev.title}">
       <h3>${ev.title}</h3>
       <p>${ev.date ?? ''}</p>
       <p>${ev.description ?? ''}</p>
