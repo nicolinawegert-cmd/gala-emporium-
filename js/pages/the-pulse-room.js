@@ -6,15 +6,16 @@ export default async function loadPulseRoom() {
     const club = await getClub(clubId);
     const events = await getEvents(clubId);
 
-    document.body.className = "the-pulse-room";
+    // Behåll andra klasser på body och lägg bara till denna
+    document.body.classList.add("the-pulse-room");
 
     return `
-        <header>
+        <header class="pulse-header">
             <h1 class="pulse-title">${club.name}</h1>
-            <p class="tagline">${club.description}</p>
+            <p class="pulse-tagline">${club.description}</p>
         </header>
 
-        <main>
+        <main class="pulse-main">
             <section class="event-grid">
                 ${events.map(ev => `
                     <article class="event-card">
@@ -28,11 +29,20 @@ export default async function loadPulseRoom() {
                     </article>
                 `).join("")}
             </section>
-        </main>
 
-        <footer>
-            <p>&copy; 2025 The Pulse Room</p>
-        </footer>
+            <footer class="pulse-footer">
+                <div class="pulse-footer-inner">
+                    <h2 class="pulse-footer-title">The Pulse Room</h2>
+                    <p class="pulse-footer-sub">Feel the rhythm. Live the night.</p>
+
+                    <div class="pulse-footer-links">
+                        <a href="#start">Home</a>
+                        <a href="#booking">Booking</a>
+                    </div>
+
+                    <p class="pulse-footer-copy">© 2025 The Pulse Room – All Rights Reserved</p>
+                </div>
+            </footer>
+        </main>
     `;
 }
-

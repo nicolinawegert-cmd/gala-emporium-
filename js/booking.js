@@ -9,6 +9,8 @@ export default async function loadBooking() {
   const form = document.createElement("form");
   form.id = "booking-form";
 
+  document.body.className = "the-pulse-room";
+
   // INPUT FIELDS
   form.appendChild(createInput("name", "Full Name", "text"));
   form.appendChild(createInput("email", "Email Address", "email"));
