@@ -33,7 +33,7 @@ body.rally-house{
 
 }
 
-#main{
+#new{
     background-color: rgba(250, 215, 236, 0.75);
     border: 5px solid #670000;
     padding-left: 20%;
@@ -101,7 +101,7 @@ article.rally-house{
 }
 
 @media (max-width: 570px){
-    #main{
+    #new{
         width: 90%;           /* prevent stretching */
     }
 
