@@ -1,0 +1,84 @@
+/* Wrapper för startsidan */
+.start-page {
+  background: linear-gradient(180deg, #0b0b0b, #000);
+  color: #f0f0f0;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+/* Hero-sektion (titel + undertitel) */
+.hero-antique {
+  text-align: center;
+  padding: 100px 20px 60px;
+  background: linear-gradient(180deg, #111, #000);
+}
+
+.hero-title {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 0 0 10px #ff1e85;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* Rubrik för kommande event */
+.section-title {
+  text-align: center;
+  color: #ff1e85;
+  font-size: 2rem;
+  margin: 40px 0 30px;
+}
+
+/* Container för event-listan */
+.event-posters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Enskilt eventkort */
+.event-poster {
+  background: #111;
+  border: 1px solid #ff007a44;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.event-poster:hover {
+  border-color: #ff1e85;
+  box-shadow: 0 0 15px #ff1e8555;
+}
+
+/* Eventtitel */
+.event-poster h3 {
+  color: #00eaff;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+/* Datum */
+.event-date {
+  color: #bbb;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+/* Länk */
+.event-link {
+  color: #ff79c6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.event-link:hover {
+  text-decoration: underline;
+}

@@ -6,7 +6,7 @@ header.jazz-corner {
     margin: 0;
 }
 
-nav ul {
+nav ul.jazz-corner-menu {
     display: flex;
     justify-content: center;
     margin: 0;
@@ -16,7 +16,7 @@ nav ul {
     gap: 30px;
 }
 
-nav a {
+nav a.jazz-corner-link {
     text-decoration: none;
     color: black;
     font-weight: bold;
@@ -24,17 +24,17 @@ nav a {
     padding: 6px 10px;
 }
 
-nav a:hover {
+nav a:hover.jazz-corner-link {
     text-decoration: underline;
 }
 
-.slider {
+.slider.jazz-corner-slider {
     width: 100vw;
     margin: 24px 0;
     padding: 0;
 }
 
-.slides {
+.slides.slider.jazz-corner-slider {
     width: 100%;
     display: flex;
     gap: 16px;
@@ -46,7 +46,7 @@ nav a:hover {
 
 }
 
-.slides .event-card {
+.slides .event-card.jazz-corner-event-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,7 +56,7 @@ nav a:hover {
     scroll-snap-stop: always
 }
 
-footer {
+footer.jazz-corner {
     background: linear-gradient(90deg, #5c258d 0%, #b06ab3 50%, #d4af37 100%);
     text-align: center;
 
