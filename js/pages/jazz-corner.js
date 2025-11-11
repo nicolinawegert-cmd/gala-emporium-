@@ -7,12 +7,24 @@ export default async function loadJazzCorner() {
         getEvents(clubId)     
     ]);
     document.body.className = "Jazz-corner";
-
+ 
+     const top4 = (events || []).slice(0, 4)
+    .map(ev => `
+      <div>
+        <h3>${ev.title}</h3>
+        <p>${ev.date ?? ''}</p>
+        <p>${ev.description ?? ''}</p>
+        <a href="#booking" data-route="booking">Boka</a>
+      </div>
+    `).join('');
 
 return `
     <h1>${club.name}</h1>
     <p>${club.description}</p>
- `;}
 
-  const top4 = (events || []).slice(0, 4);
-  top4.map(ev => {ev.title})
+    <h2>Fyra jazzkvällar</h2>
+    <div>
+      ${top4}
+    </div>
+  `;
+}
