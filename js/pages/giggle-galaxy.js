@@ -4,48 +4,65 @@ import { getClub, getEvents } from "../api.js";
 export default async function loadGiggleGalaxy() {
   const clubId = "gg01";
 
-  //Fetch club details and its related events from API
+  // Fetch club details and its related events from API
   const club = await getClub(clubId);
   const events = await getEvents(clubId);
-  
+
+  // Set body class for page-specific theme
   document.body.className = "giggle-galaxy";
 
- return `
-    <section class="gg-header">
-      <h2>${club.name}</h2>
-      <p>Where laughter meets the stars!</p>
-    </section>
+  // Return structured and semantic HTML
+  return `
+    <div class="gg-wrapper">
+      <header class="gg-header">
+        <h1 class="gg-title">${club.name}</h1>
+        <p class="gg-tagline">Where laughter meets the stars!</p>
+      </header>
 
-    <section class="gg-club">
-      <h3>About Us</h3>
-      <p>${club.description}</p>
-    </section>
+      <main class="gg-layout">
+        <section class="gg-about card">
+          <h2>About Us</h2>
+          <p>${club.description}</p>
+        </section>
 
-    <section class="gg-events">
-      ${
-        //Render all club events or show a fallback message
-        events.length > 0
-          ? events
-              .map(
-                (ev) => `
-          <article class="gg-event-card">
-            <h3>${ev.title}</h3>
-            <p><strong>${ev.date}</strong> – ${ev.time}</p>
-            <details>
-              <summary>More info</summary>
-              <p>${ev.description ? ev.description : "No description available."}</p>
-            </details>
-          </article>
-        `
-              )
-              .join("")
-          : `<p>No upcoming events at the moment.</p>`
-      }
-    </section>
+        <section class="gg-events">
+          <h2>Upcoming Shows</h2>
+          <div class="gg-event-list">
+            ${
+              events.length > 0
+                ? events
+                    .map(
+                      (ev) => `
+                <article class="gg-event-card">
+                  <h3>${ev.title}</h3>
+                  <p class="gg-event-meta"><strong>${ev.date}</strong> – ${ev.time}</p>
+                  <details>
+                    <summary>More info</summary>
+                    <p>${ev.description || "No description available."}</p>
+                  </details>
+                </article>
+              `
+                    )
+                    .join("")
+                : `<p class="gg-no-events">No upcoming events at the moment.</p>`
+            }
+          </div>
+        </section>
+      </main>
+
+      <footer class="gg-footer">
+        <p>&copy; 2025 Giggle Galaxy Comedy Club</p>
+      </footer>
+    </div>
   `;
-/*
-  const main = document.querySelector('main');
-  main.innerHTML = ''; // clear previous club content
-  main.appendChild(container)
-  */
 }
+
+
+
+
+
+
+
+
+
+
