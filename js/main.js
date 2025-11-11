@@ -30,8 +30,9 @@ function createMenu() { //funktion som skapar menyn och returnerar en html strä
 
 async function loadPageContent() {
   if (!location.hash) {
-     location.replace('#start');
-}
+    location.replace('#start');
+    return;
+  }
     
     const key = location.hash.slice(1);
     const pageFunction = menu[key].function;
@@ -39,10 +40,14 @@ async function loadPageContent() {
    
     const html = await pageFunction();
     document.querySelector('#page-container').innerHTML = html;
-    eventFunction();
+
+    if (typeof eventFunction === 'function') {
+      eventFunction();
+    }
 }
- //call loadPageContent once on page load
-   document.querySelector('header nav').innerHTML = createMenu();
+
+//call loadPageContent once on page load
+document.querySelector('header nav').innerHTML = createMenu();
   loadPageContent();
   window.onhashchange = loadPageContent;
 
