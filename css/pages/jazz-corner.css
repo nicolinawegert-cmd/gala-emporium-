@@ -1,0 +1,29 @@
+/* Wrapper */
+.page.jazz-corner {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: radial-gradient(circle at top, #0a0a0a, #000);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  padding: 2rem;
+}
+
+/* Layout runt titeln */
+.jazz-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+/* Vänster och höger kolumn */
+.events-side {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 260px;
+}
+

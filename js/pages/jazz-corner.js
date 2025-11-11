@@ -6,37 +6,45 @@ export default async function loadJazzCorner() {
         getClub(clubId),  
         getEvents(clubId)     
     ]);
-    document.body.className = "Jazz-corner";
- 
-     const top4 = (events || [])
-    .slice(0, 4)
-    .map(ev => `
-      <article class="event-card">
-        <h3 class="event-cardTitle">${ev.title}</h3>
-        <p class="event-cardDate">${ev.date ?? ''}</p>
-        <p class="event-cardDesc">${ev.description ?? ''}</p>
-        <a class="event-cardCta" href="#booking" data-route="booking">Boka</a>
-      </article>
-    `).join('');
+     document.body.className = "jazz-corner";
 
-return `
+  // Första två till vänster, nästa två till höger
+  const leftEvents = (events || []).slice(0, 2).map(ev => `
+    <article class="event-card">
+      <h3>${ev.title}</h3>
+      <p>${ev.date ?? ''}</p>
+      <p>${ev.description ?? ''}</p>
+    </article>
+  `).join('');
+
+  const rightEvents = (events || []).slice(2, 4).map(ev => `
+    <article class="event-card">
+      <h3>${ev.title}</h3>
+      <p>${ev.date ?? ''}</p>
+      <p>${ev.description ?? ''}</p>
+    </article>
+  `).join('');
+
+  return `
     <section class="page jazz-corner">
-    <header class="page-header">
-      <h1 class="page-title">${club.name}</h1>
-      <p class="page-tagline">${club.description}</p>
-      </header>
-      
-    <section class="events">
-      <h2 class="events__heading">Fyra jazzkvällar</h2>
-      <div class="events-grid">
-        ${top4}
+      <div class="jazz-layout">
+        <div class="events-side left-side">
+          ${leftEvents}
+        </div>
+
+        <div class="center-text">
+          <h1 class="big-title">${club.name}</h1>
+          <p class="subtitle">${club.description}</p>
+        </div>
+
+        <div class="events-side right-side">
+          ${rightEvents}
+        </div>
       </div>
-      </section>
-  
-  <footer>
-    <p>&copy; Jazz Corner 2025</p>
-  </footer>
-  </section>
-   
+
+      <footer class="page-footer">
+        <p>&copy; Jazz Corner 2025</p>
+      </footer>
+    </section>
   `;
-    }
+}
