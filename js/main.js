@@ -3,7 +3,7 @@ import loadBooking from './booking.js';
 import loadPulseRoom from './pages/the-pulse-room.js';
 import loadJazzCorner from './pages/jazz-corner.js';
 import loadGiggleGalaxy from './pages/giggle-galaxy.js';
-import loadRallyHouse from './pages/rally-house.js';
+import loadRallyHouse, {functions} from './pages/rally-house.js';
 import loadAdmin from './admin.js';
 
 
@@ -14,7 +14,7 @@ const menu = {
   "start": { label: 'Start', function: loadStart },
   "jazz-corner": { label: 'Jazz-corner', function: loadJazzCorner },
   "giggle-galaxy": { label: 'Giggle-galaxy', function: loadGiggleGalaxy },
-  "rally-house": { label: 'Rally-house', function: loadRallyHouse },
+  "rally-house": { label: 'Rally-house', function: loadRallyHouse, eventFunc: functions},
   "the-pulse-room": { label: 'The-pulse-room', function: loadPulseRoom },
   "booking": { label: 'Booking', function: loadBooking },
   "admin": { label: 'Admin', function: loadAdmin },
@@ -35,12 +35,32 @@ async function loadPageContent() {
     
     const key = location.hash.slice(1);
     const pageFunction = menu[key].function;
+    const eventFunction = menu[key].eventFunc;
    
     const html = await pageFunction();
-    document.querySelector('main').innerHTML = html;
+    document.querySelector('#page-container').innerHTML = html;
+    eventFunction();
 }
  //call loadPageContent once on page load
    document.querySelector('header nav').innerHTML = createMenu();
   loadPageContent();
   window.onhashchange = loadPageContent;
+
+  export default function createEvent(title, date, time, clubId){
+    fetch("http://localhost:3000/events", {
+        method: "POST", body: JSON.stringify({
+        clubId: clubId,
+        date: date,
+        time: time,
+        title: title
+        })
+        })
+        .then(response => response.json())
+        .then(data => {
+        console.log("Added new club:", data);
+        })
+        .catch(error => console.error("Error:", error));
+                    
+
+}
 
