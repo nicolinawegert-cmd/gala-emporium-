@@ -56,7 +56,7 @@
         <input id="secondInput" type="text" />
     </form>
 
-    <div id="main">
+    <div id="new">
         <h1>The Rally House</h1>
         <div id="explanation">
             <h3>
