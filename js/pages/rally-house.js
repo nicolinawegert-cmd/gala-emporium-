@@ -36,13 +36,15 @@
         let songs = ["MARLBORO CLUB 4.mp3", "RALLY HOUSE 4.mp3", "Bring it!.mp3"];
 
         for(let i = 0; i < 3; i++){
-            html += `<article class="rally-house starterSongs" data-src="songs/${songs[i]}">
+            html += `
+            <article class="rally-house starterSongs" data-src="songs/${songs[i]}">
             <h2>${artists[i]}</h2>
             <h3>${songNames[i]}</h3>
             <span class="material-symbols-outlined">
             play_circle
             </span>
-            </article>`;
+            </article>
+            `;
         }
 
         return html;
