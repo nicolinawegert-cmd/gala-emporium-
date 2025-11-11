@@ -9,6 +9,7 @@
         const clubsResponse = await fetch("http://localhost:3000/clubs");
         const events = await response.json();
         const clubs = await clubsResponse.json();
+        document.body.className = "rally-house";
 
 
         function toReturnExplanation()
@@ -32,7 +33,7 @@
             let html = ""; 
 
             html = events.map(({clubId, time, date, title}) => { if(clubId == "hh72") { return `
-            <article>
+            <article class="rally-house">
             <h2>${title}</h2>
             <h3>${date}</h3>
             <h4>${time}</h4>
@@ -63,17 +64,26 @@
             </h3>
         </div>
         <div id="songs">
-            <article>
-            <h2>artists</h2>
-            <h3>song title</h3>
+            <article class="rally-house starterSongs">
+            <h2>PXRKX</h2>
+            <h3>Marlboro Club</h3>
+            <span class="material-symbols-outlined">
+            play_circle
+            </span>
             </article>
-            <article>
-            <h2>artists</h2>
-            <h3>song title</h3>
+            <article class="rally-house starterSongs">
+            <h2>prod. DTM</h2>
+            <h3>Rally House</h3>
+            <span class="material-symbols-outlined">
+            play_circle
+            </span>
             </article>
-            <article>
-            <h2>artists</h2>
-            <h3>song title</h3>
+            <article class="rally-house starterSongs">
+            <h2>-prey, staplegun</h2>
+            <h3>Bring it!</h3>
+            <span class="material-symbols-outlined">
+            play_circle
+            </span>
             </article>
         </div>
 
@@ -123,7 +133,7 @@ export async function functions(){
         function toReturnAdmin(){
             console.log("DOM test");
             return `
-            <form id="myForm">
+            <form id="eventForm">
             <p>Date</p>
             <input id="dateInput" type="text" />
             <p>Time</p>

@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=play_circle");
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
 
 .fjalla-one-regular {
   font-family: "Fjalla One", sans-serif;
@@ -6,16 +16,13 @@
   font-style: normal;
 }
 
-form{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+#myForm{
     p{
         color: #fff;
     }
 }
 
-body{
+body.rally-house{
     background: url(https://images.steamusercontent.com/ugc/927052267576803471/2385C4C29F428A972318B8C881D70CE8F436758B/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false);
     background-size: cover;
     justify-content: space-evenly;
@@ -66,11 +73,17 @@ body{
 
 }
 
-article{
+article.starterSongs{
+    justify-items: left;
+    display: grid;
+}
+
+article.rally-house{
     padding-left: 5%;
     padding-right: 5%;
     border: 2px solid #670000;
     border-radius: 10px;
+
 }
 
 #button {
@@ -102,6 +115,6 @@ article{
 
 @media (max-width: 238px){
     #events {
-    grid-template-columns: repeat(1, 1fr); /* only 2 columns on small screens */
+    grid-template-columns: repeat(1, 1fr); /* only 1 column on small screens */
   }
 }
