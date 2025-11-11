@@ -6,8 +6,13 @@ export default async function loadJazzCorner() {
         getClub(clubId),  
         getEvents(clubId)     
     ]);
+    document.body.className = "Jazz-corner";
 
-    return `
-    
-  `;
-}
+
+return `
+    <h1>${club.name}</h1>
+    <p>${club.description}</p>
+ `;}
+
+  const top4 = (events || []).slice(0, 4);
+  top4.map(ev => {ev.title})
