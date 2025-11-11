@@ -12,10 +12,10 @@ import loadAdmin from './admin.js';
 // function to run on menu choice
 const menu = {
   "start": { label: 'Start', function: loadStart },
-  "jazz-corner": { label: 'Jazz-corner', function: loadJazzCorner },
-  "giggle-galaxy": { label: 'Giggle-galaxy', function: loadGiggleGalaxy },
-  "rally-house": { label: 'Rally-house', function: loadRallyHouse, eventFunc: functions},
-  "the-pulse-room": { label: 'The-pulse-room', function: loadPulseRoom },
+  "jazz-corner": { label: 'Jazz Corner', function: loadJazzCorner },
+  "giggle-galaxy": { label: 'Giggle Galaxy', function: loadGiggleGalaxy },
+  "rally-house": { label: 'Rally House', function: loadRallyHouse, eventFunc: functions},
+  "the-pulse-room": { label: 'The Pulse Room', function: loadPulseRoom },
   "booking": { label: 'Booking', function: loadBooking },
   "admin": { label: 'Admin', function: loadAdmin },
 };
