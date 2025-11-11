@@ -6,15 +6,15 @@ export default async function loadPulseRoom() {
     const club = await getClub(clubId);
     const events = await getEvents(clubId);
 
-    document.body.className = "the-pulse-room";
+    document.body.classList.add("the-pulse-room");
 
-    return `
-        <header>
+   const html = `
+        <header class="pulse-header">
             <h1 class="pulse-title">${club.name}</h1>
-            <p class="tagline">${club.description}</p>
+            <p class="pulse-tagline">${club.description}</p>
         </header>
 
-        <main>
+        <main class="pulse-main">
             <section class="event-grid">
                 ${events.map(ev => `
                     <article class="event-card">
@@ -25,14 +25,44 @@ export default async function loadPulseRoom() {
                             <summary>Mer info</summary>
                             <p>${ev.description}</p>
                         </details>
+                        <button 
+                            class="book-event-btn" 
+                            data-club="${clubId}" 
+                            data-id="${ev.id}"
+                            data-title="${ev.title}">
+                            Book Event
+                        </button>
                     </article>
                 `).join("")}
             </section>
+
+            <footer class="pulse-footer">
+                <div class="pulse-footer-inner">
+                    <h2 class="pulse-footer-title">The Pulse Room</h2>
+                    <p class="pulse-footer-sub">Feel the rhythm. Live the night.</p>
+
+                    <div class="pulse-footer-links">
+                        <a href="#start">Home</a>
+                        <a href="#booking">Booking</a>
+                    </div>
+
+                    <p class="pulse-footer-copy">© 2025 The Pulse Room – All Rights Reserved</p>
+                </div>
+            </footer>
         </main>
-
-        <footer>
-            <p>&copy; 2025 The Pulse Room</p>
-        </footer>
     `;
-}
 
+    setTimeout(() => {
+        document.querySelectorAll(".book-event-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+
+                localStorage.setItem("preselectClub", btn.dataset.club);
+                localStorage.setItem("preselectEvent", btn.dataset.id);
+
+                window.location.hash = "#booking";
+            });
+        });
+    }, 0);
+
+    return html;
+}
