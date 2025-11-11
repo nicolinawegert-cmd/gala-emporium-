@@ -7,13 +7,10 @@ export default async function loadGiggleGalaxy() {
   //Fetch club details and its related events from API
   const club = await getClub(clubId);
   const events = await getEvents(clubId);
+  
+  document.body.className = "giggle-galaxy";
 
-  //Create a unique container for Giggle Galaxy content
-  const container = document.createElement('div');
-  container.classList.add('giggle-galaxy');// wrapper for scoped css
-
-  //Build the HTML content inside wrapper
-  container.innerHTML = `
+ return `
     <section class="gg-header">
       <h2>${club.name}</h2>
       <p>Where laughter meets the stars!</p>
@@ -46,8 +43,9 @@ export default async function loadGiggleGalaxy() {
       }
     </section>
   `;
-
+/*
   const main = document.querySelector('main');
   main.innerHTML = ''; // clear previous club content
   main.appendChild(container)
+  */
 }
