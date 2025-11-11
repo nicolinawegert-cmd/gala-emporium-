@@ -1,71 +1,45 @@
+// Import functions for fetching club and event data
 import { getClub, getEvents } from "../api.js";
 
 export default async function loadGiggleGalaxy() {
-    const clubId = "gg01";
+  const clubId = "gg01";
 
-    const club = await getClub(clubId);
-    const events = await getEvents(clubId);
+  //Fetch club details and its related events from API
+  const club = await getClub(clubId);
+  const events = await getEvents(clubId);
 
-    return `
+ //Build and return the full HTML structure for this page
+  return `
+    <section class="giggle-header">
+      <h2>${club.name}</h2>
+      <p>Where laughter meets the stars!</p>
+    </section>
 
-
-export default async function loadGiggleGalaxy() {
-      const main = document.querySelector("main");
-
-      const link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.href = "./css/pages/giggle-galaxy.css";
-      document.head.appendChild(link);
-      
-      main.innerHTML = `
-      <section class="giggle-header">
-        <h2>Giggle Galaxy</h2>
-        <p>Welcome to Giggle Galaxy - where laughter meets the stars!</p>
-        </section>
-
-        <section id="club-info"></section>
-        <section id="event-list"></section>
-      `;
-
-  const eventList = document.getElementById("event-list");
-  const clubInfo = document.getElementById("club-info");
-
-  try {
-    // Fetch all clubs from JSON server
-    const clubResponse = await fetch("http://localhost:3000/clubs");
-    const clubs = await clubResponse.json();
-
-    // Find Giggle Galaxy info
-    const giggleGalaxyClub = clubs.find(club => club.name === "Giggle Galaxy");
-
-    // If found, display club description
-    if (giggleGalaxyClub && clubInfo) {
-      clubInfo.innerHTML = `
+    <section id="club-info">
       <h3>About Us</h3>
-      <p>${giggleGalaxyClub.description}</p>
-      `;
-    }
-  
-    //Fetch all events from JSOn server
-    const response = await fetch("http://localhost:3000/events");
-    const events = await response.json();
+      <p>${club.description}</p>
+    </section>
 
-    // Filter events that belong to Giggle Galaxy
-    const giggleEvents = events.filter(event => event.clubId === "aa220");
-
-    // Check if events exist
-    if (giggleEvents.length > 0) {
-      eventList.innerHTML = giggleEvents.map(event => `
-       <div class="event-card">
-       <h3>${event.title}</h3>
-       <p>${event.date} - ${event.time}</p>
-       </div>
-        `).join("");
-    } else {
-      eventList.innerHTML = "<p>No events found for Giggle Galaxy</p>";
-    }
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    eventList.innerHTML = "<p>Failed to load data. Please try again later.</p>";
-  }
+    <section class="events">
+      ${
+        //Render all club events or show a fallback message
+        events.length > 0
+          ? events
+              .map(
+                (ev) => `
+          <article class="event-card">
+            <h3>${ev.title}</h3>
+            <p><strong>${ev.date}</strong> – ${ev.time}</p>
+            <details>
+              <summary>More info</summary>
+              <p>${ev.description ? ev.description : "No description available."}</p>
+            </details>
+          </article>
+        `
+              )
+              .join("")
+          : `<p>No upcoming events at the moment.</p>`
+      }
+    </section>
+  `;
 }

@@ -3,16 +3,18 @@ export default async function loadBooking() {
   container.classList.add("booking-page");
 
   const title = document.createElement("h1");
-  title.textContent = "Booking tickets";
+  title.textContent = "Booking Tickets";
   container.appendChild(title);
 
   const form = document.createElement("form");
   form.id = "booking-form";
 
-  form.appendChild(createInputField("name", "Full Name", "text"));
-  form.appendChild(createInputField("email", "Email Address", "email"));
-  form.appendChild(createInputField("tickets", "Number of Tickets", "number", { min: 1, max: 10 }));
+  // INPUT FIELDS
+  form.appendChild(createInput("name", "Full Name", "text"));
+  form.appendChild(createInput("email", "Email Address", "email"));
+  form.appendChild(createInput("tickets", "Number of Tickets", "number", { min: 1, max: 10 }));
 
+  // SELECT FIELD
   const labelClub = document.createElement("label");
   labelClub.textContent = "Select Club:";
 
@@ -34,14 +36,15 @@ export default async function loadBooking() {
 
   clubs.forEach(club => {
     const option = document.createElement("option");
-    option.value = club;
-    option.textContent = club.replace("-"," ");
+    option.value = club.id;
+    option.textContent = club.name;
     select.appendChild(option);
   });
-  
+
   labelClub.appendChild(select);
   form.appendChild(labelClub);
 
+  // SUBMIT BUTTON
   const button = document.createElement("button");
   button.type = "submit";
   button.textContent = "Book Now";
@@ -53,7 +56,8 @@ export default async function loadBooking() {
   result.id = "booking-result";
   container.appendChild(result);
 
-  form.addEventListner("submit", e => {
+  // SUBMIT LISTENER
+  form.addEventListener("submit", e => {
     e.preventDefault();
 
     const formData = Object.fromEntries(new FormData(form).entries());
@@ -64,15 +68,17 @@ export default async function loadBooking() {
       <h2>Booking Confirmed!</h2>
       <p>Booking Number: <strong>${bookingNumber}</strong></p>
       <p>Sent to: ${formData.email}</p>
-      <p>Club: ${formData.club.replace("-"," ")}</p>
+      <p>Club: ${formData.club.replace("-", " ")}</p>
       <p>Number of Tickets: ${formData.tickets}</p>
     `;
+
     form.reset();
   });
 
   return container.outerHTML;
 }
 
+// ✅ FIXED INPUT FUNCTION
 function createInput(name, labelText, type, attributes = {}) {
   const label = document.createElement("label");
   label.textContent = labelText;
@@ -89,4 +95,3 @@ function createInput(name, labelText, type, attributes = {}) {
   label.appendChild(input);
   return label;
 }
-
