@@ -1,11 +1,12 @@
-:root {
+/* ================================================
+   THE PULSE ROOM – Klubbens egna variabler
+   ================================================ */
+body.the-pulse-room {
   --primary: #e91e63;
   --accent: #00e5ff;
   --bg: #0d0d0d;
   --text: #f5f5f5;
-}
 
-body.the-pulse-room {
   background-color: var(--bg);
   color: var(--text);
   font-family: 'Poppins', sans-serif;
@@ -13,13 +14,16 @@ body.the-pulse-room {
   padding: 0;
 }
 
-header {
+/* ================================================
+   HEADER
+   ================================================ */
+.the-pulse-room header {
   text-align: center;
   padding: 2rem 1rem;
   background: radial-gradient(circle at center, var(--primary) 0%, #000 100%);
 }
 
-.pulse-title {
+.the-pulse-room .pulse-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 3rem;
   color: var(--accent);
@@ -28,43 +32,66 @@ header {
 }
 
 @keyframes pulse {
-  0%, 100% { text-shadow: 0 0 10px var(--accent); }
-  50% { text-shadow: 0 0 25px var(--accent), 0 0 45px var(--primary); }
+
+  0%,
+  100% {
+    text-shadow: 0 0 10px var(--accent);
+  }
+
+  50% {
+    text-shadow: 0 0 25px var(--accent), 0 0 45px var(--primary);
+  }
 }
 
-.tagline {
+.the-pulse-room .tagline {
   font-size: 1.2rem;
   margin-bottom: 1rem;
   color: var(--text);
 }
 
-nav a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 500;
-}
-nav a:hover {
-  text-decoration: underline;
+/* ================================================
+   NAVIGATION
+   ================================================ */
+.the-pulse-room nav {
+  background-color: #111;
+  padding: 1rem;
+  border-bottom: 1px solid var(--accent);
 }
 
-main {
+.the-pulse-room nav a {
+  color: var(--accent);
+  /* syns tydligt mot mörk bg */
+  font-weight: 600;
+  text-shadow: 0 0 6px var(--accent);
+}
+
+.the-pulse-room nav a:hover {
+  color: var(--primary);
+}
+
+/* ================================================
+   MAIN CONTENT
+   ================================================ */
+.the-pulse-room main {
   padding: 2rem;
 }
 
-h2 {
+.the-pulse-room h2 {
   font-family: 'Orbitron', sans-serif;
   color: var(--primary);
   text-align: center;
 }
 
-.event-grid {
+/* GRID */
+.the-pulse-room .event-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
 
-.event-card {
+/* EVENT CARD */
+.the-pulse-room .event-card {
   background-color: #111;
   border: 1px solid var(--accent);
   padding: 1rem;
@@ -74,17 +101,20 @@ h2 {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.event-card:hover {
+.the-pulse-room .event-card:hover {
   transform: scale(1.05);
   box-shadow: 0 0 25px var(--primary);
 }
 
-.event-card img {
+.the-pulse-room .event-card img {
   width: 100%;
   border-radius: 8px;
 }
 
-footer {
+/* ================================================
+   FOOTER
+   ================================================ */
+.the-pulse-room footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
@@ -93,11 +123,10 @@ footer {
   margin-top: 3rem;
 }
 
-.hidden {
-  display: none;
-}
-
-.details-btn {
+/* ================================================
+   BUTTONS
+   ================================================ */
+.the-pulse-room .details-btn {
   background-color: var(--primary);
   color: #fff;
   border: none;
@@ -108,7 +137,14 @@ footer {
   transition: 0.3s;
 }
 
-.details-btn:hover {
+.the-pulse-room .details-btn:hover {
   background-color: var(--accent);
   color: #000;
+}
+
+/* ================================================
+   UTILITY
+   ================================================ */
+.the-pulse-room .hidden {
+  display: none;
 }
