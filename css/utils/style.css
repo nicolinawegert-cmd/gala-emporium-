@@ -1,3 +1,9 @@
+@import '../pages/start-page.css';
+@import '../pages/the-pulse-room.css';
+@import '../pages/jazz-corner.css';
+@import '../pages/giggle-galaxy.css';
+@import '../pages/rally-house.css';
+@import '../pages/moose-vibes.css';
 
 /* Globala variabler */
 :root {
@@ -96,10 +102,3 @@ nav a:hover {
   color: var(--color-primary);
   text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
 }
-
-@import '../pages/the-pulse-room.css';
-@import '../pages/jazz-corner.css';
-@import '../pages/giggle-galaxy.css';
-@import '../pages/rally-house.css';
-@import '../pages/moose-vibes.css';
-@import '../pages/start-page.css';
