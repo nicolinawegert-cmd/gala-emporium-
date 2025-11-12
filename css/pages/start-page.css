@@ -1,8 +1,19 @@
+:root {
+  --color-primary: #ffffff;
+  --color-secondary: #d4af37;
+  --color-accent: #e29f2b;
+  --bg-gradient: linear-gradient(135deg, #000, #222);
+  --font-primary: "Playfair Display", serif;
+  --font-secondary: "Montserrat", sans-serif;
+  --border-radius: 12px;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
 .start-page {
   background: url("../../assets/images/gala-emporium-bg.png") no-repeat center center fixed;
   background-size: cover;
   background-attachment: fixed;
-  color: #f0f0f0;
+  color: var(--color-primary);
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
   padding-bottom: 60px;
@@ -18,20 +29,20 @@
 
 .hero-title {
   font-size: 3rem;
-  color: #fff;
-  text-shadow: 0 0 10px #ff1e85;
+  color: var(--color-primary);
+  text-shadow: 0 0 10px #e29f2b;
   margin-bottom: 10px;
 }
 
 .hero-subtitle {
   font-size: 1.2rem;
-  color: #ccc;
+  color: var(--color-primary);
 }
 
 
 .section-title {
   text-align: center;
-  color: #ff1e85;
+  color: var(--color-primary);
   font-size: 2rem;
   margin: 40px 0 30px;
 }
@@ -47,31 +58,31 @@
 
 .event-poster {
   background: #111;
-  border: 1px solid #ff007a44;
+  border: 1px solid var(--color-secondary);
   border-radius: 10px;
   padding: 20px;
   transition: 0.3s;
 }
 
 .event-poster:hover {
-  border-color: #ff1e85;
-  box-shadow: 0 0 15px #ff1e8555;
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 15px var(--color-accent);
 }
 
 .event-poster h3 {
-  color: #00eaff;
+  color: var(--color-secondary);
   font-size: 1.2rem;
   margin-bottom: 8px;
 }
 
 .event-date {
-  color: #bbb;
+  color: var(--color-primary);
   font-size: 0.9rem;
   margin-bottom: 10px;
 }
 
 .event-link {
-  color: #ff79c6;
+  color: var(--color-secondary);
   text-decoration: none;
   font-weight: 500;
 }
