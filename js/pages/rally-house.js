@@ -37,7 +37,7 @@
 
         for(let i = 0; i < 3; i++){
             html += `
-            <article class="rally-house starterSongs" data-src="songs/${songs[i]}">
+            <article class="rally-house starterSongs" data-src="assets/songs/${songs[i]}">
             <h2>${artists[i]}</h2>
             <h3>${songNames[i]}</h3>
             <span class="material-symbols-outlined">
