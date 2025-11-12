@@ -6,7 +6,8 @@ export default async function loadStart() { //skapar funktionen LoadStart
   const upcoming = events 
   .sort ((a, b) => new Date(a.date) - new Date(b.date)) //sorterar events efter datum i stigande ordning
   .slice(0, 6); //tar de 6 första eventsen från den sorterade listan
-     document.body.className = "start-page"; //sätter body klassnamn till start-page
+    
+  document.body.className = "start-page"; //sätter body klassnamn till start-page
     return `
     <section class="hero-antique">
         <div class="hero-overlay"></div>
