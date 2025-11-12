@@ -3,6 +3,7 @@
 body {
   font-family: "Raleway", sans-serif;
 }
+
 .big-title {
   font-family: "Syncopate", sans-serif;
   letter-spacing: 4px;
@@ -27,7 +28,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 3rem;
- 
+
 }
 
 .events-side {
@@ -35,7 +36,7 @@ body {
   flex-direction: column;
   gap: 2rem;
   max-width: 400px;
-   
+
 }
 
 .event-card {
@@ -46,16 +47,18 @@ body {
   transition: transform 0.25s ease, background 0.3s ease;
   box-shadow: 0 6px 24px rgba(24, 8, 8, 0.35);
   color: #fff;
-  height: 370px; /* <-- högre kort (tidigare 185px) */
+  height: 370px;
+  /* <-- högre kort (tidigare 185px) */
   display: flex;
   flex-direction: column;
 }
-  .event-card img {
+
+.event-card img {
   width: 100%;
-  height: 60%;        
-  object-fit: cover;    
+  height: 60%;
+  object-fit: cover;
   display: block;
-   
+
 }
 
 .event-card:hover {
@@ -72,12 +75,13 @@ body {
 }
 
 .event-card p {
-  font-size: 0.9rem;
+  font-size: 1, 2rem;
   opacity: 0.8;
   text-align: center;
   padding: 1px;
   margin: 1px;
   color: #d4af37;
+  font-weight: 800;
 }
 
 .center-text {
@@ -86,11 +90,11 @@ body {
 }
 
 .big-title {
- font-family: "Syncopate", sans-serif;
+  font-family: "Syncopate", sans-serif;
   font-size: 4rem;
   font-weight: 800;
   margin-bottom: 0.8rem;
-  color: #d4af37; 
+  color: #d4af37;
   text-transform: uppercase;
   letter-spacing: 4px;
 }
@@ -108,10 +112,12 @@ body {
   opacity: 0.6;
   border: solid #d4af37;
   background-color: black;
+  font-weight: 800;
 }
+
 .page.jazz-corner {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;  
+  justify-content: space-between;
 }
