@@ -11,7 +11,7 @@ import loadRallyHouse, {functions} from './pages/rally-house.js';
 
 // Our menu: label to display in menu and 
 // function to run on menu choice
-const menu = {
+  const menu = {
   "start": { label: 'Start', function: loadStart },
   "the-pulse-room": { label: 'The Pulse Room', function: loadPulseRoom },
   "jazz-corner": { label: 'Jazz Corner', function: loadJazzCorner },
