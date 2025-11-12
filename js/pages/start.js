@@ -28,4 +28,4 @@ export default async function loadStart() { //skapar funktionen LoadStart
         </div>
     </section>
 `;
-            }
+}

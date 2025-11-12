@@ -2,6 +2,8 @@ export default async function loadAdmin() {
 
   const main = document.querySelector("main");
 
+  document.body.className = "admin-page";
+
   main.innerHTML = `
   <section class="admin-container">
     <h2>Admin Panel</h2>
