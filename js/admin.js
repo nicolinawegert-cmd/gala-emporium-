@@ -90,14 +90,14 @@ export default async function loadAdmin() {
     };
 
     if (id) {
-      // 🔹 Update event (PUT)
+      // Update event (PUT)
       await fetch(`${apiUrl}/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newEvent)
       });
     } else {
-      // 🔹 Create new event (POST)
+      // Create new event (POST)
       await fetch(apiUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -135,5 +135,5 @@ export default async function loadAdmin() {
   // Load the events when the page starts
   await fetchEvents();
 
-  return container.outerHTML;
+  return container;
 }
