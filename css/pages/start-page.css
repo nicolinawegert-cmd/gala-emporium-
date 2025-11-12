@@ -1,17 +1,19 @@
-/* Wrapper för startsidan */
 .start-page {
-  background: linear-gradient(180deg, #0b0b0b, #000);
+  background: url("../../assets/images/gala-emporium-bg.png") no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
   color: #f0f0f0;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
   padding-bottom: 60px;
+  position: relative;
+  z-index: 0;
 }
 
-/* Hero-sektion (titel + undertitel) */
 .hero-antique {
   text-align: center;
   padding: 100px 20px 60px;
-  background: linear-gradient(180deg, #111, #000);
+  background: transparent
 }
 
 .hero-title {
@@ -26,7 +28,7 @@
   color: #ccc;
 }
 
-/* Rubrik för kommande event */
+
 .section-title {
   text-align: center;
   color: #ff1e85;
@@ -34,7 +36,6 @@
   margin: 40px 0 30px;
 }
 
-/* Container för event-listan */
 .event-posters {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -44,7 +45,6 @@
   padding: 0 20px;
 }
 
-/* Enskilt eventkort */
 .event-poster {
   background: #111;
   border: 1px solid #ff007a44;
@@ -58,21 +58,18 @@
   box-shadow: 0 0 15px #ff1e8555;
 }
 
-/* Eventtitel */
 .event-poster h3 {
   color: #00eaff;
   font-size: 1.2rem;
   margin-bottom: 8px;
 }
 
-/* Datum */
 .event-date {
   color: #bbb;
   font-size: 0.9rem;
   margin-bottom: 10px;
 }
 
-/* Länk */
 .event-link {
   color: #ff79c6;
   text-decoration: none;

@@ -1,63 +1,117 @@
-header.jazz-corner {
-    background: linear-gradient(90deg, #5c258d 0%, #b06ab3 50%, #d4af37 100%);
-    text-align: center;
-    font-size: 25px;
-    padding: 20px 20px;
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Raleway:wght@400;600&display=swap');
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+.big-title {
+  font-family: "Syncopate", sans-serif;
+  letter-spacing: 4px;
 }
 
-nav ul.jazz-corner-menu {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    list-style: none;
-    padding: 10px;
-    justify-content: center;
-    gap: 30px;
+/* Wrapper */
+.page.jazz-corner {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: radial-gradient(circle at top, #7c0a0a63, #000000);
+  color: white;
+  font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
+  padding: 2rem;
 }
 
-nav a.jazz-corner-link {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    padding: 6px 10px;
+
+.jazz-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+ 
 }
 
-nav a:hover.jazz-corner-link {
-    text-decoration: underline;
+.events-side {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 400px;
+   
 }
 
-.slider.jazz-corner-slider {
-    width: 100vw;
-    margin: 24px 0;
-    padding: 0;
+.event-card {
+  background: rgba(165, 71, 71, 0.05);
+  border: 2px solid #d4af37;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.25s ease, background 0.3s ease;
+  box-shadow: 0 6px 24px rgba(24, 8, 8, 0.35);
+  color: #fff;
+  height: 370px; /* <-- högre kort (tidigare 185px) */
+  display: flex;
+  flex-direction: column;
+}
+  .event-card img {
+  width: 100%;
+  height: 60%;        
+  object-fit: cover;    
+  display: block;
+   
 }
 
-.slides.slider.jazz-corner-slider {
-    width: 100%;
-    display: flex;
-    gap: 16px;
-    overflow-x: auto;
-    padding: 8px 0;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
+.event-card:hover {
+  transform: translateY(-5px);
+  background: rgba(235, 223, 223, 0.1);
 
 }
 
-.slides .event-card.jazz-corner-event-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 40px 60px;
-    scroll-snap-align: center;
-    scroll-snap-stop: always
+.event-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #d4af37;
 }
 
-footer.jazz-corner {
-    background: linear-gradient(90deg, #5c258d 0%, #b06ab3 50%, #d4af37 100%);
-    text-align: center;
+.event-card p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  text-align: center;
+  padding: 1px;
+  margin: 1px;
+  color: #d4af37;
+}
 
+.center-text {
+  text-align: center;
+  max-width: 600px;
+}
+
+.big-title {
+ font-family: "Syncopate", sans-serif;
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  color: #d4af37; 
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+
+.page-footer {
+  margin-top: 3rem;
+  text-align: center;
+  opacity: 0.6;
+  border: solid #d4af37;
+  background-color: black;
+}
+.page.jazz-corner {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  
 }
