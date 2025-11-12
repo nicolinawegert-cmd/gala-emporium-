@@ -73,7 +73,7 @@ export default async function loadAdmin() {
       </div>
     `).join("");
 
-    // NOTE: No querySelectorAll here anymore! Event delegation handles it.
+    
   }
 
   /* ---------------- HANDLE SUBMIT ---------------- */
