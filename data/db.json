@@ -63,7 +63,7 @@
     {
       "id": "5",
       "title": "PXRKX set",
-      "date": "2025-12-01",
+      "date": "2025-11-16",
       "time": "17:30",
       "clubId": "hh72"
     },
@@ -88,7 +88,7 @@
       "time": "20:00",
       "img": "/assets/images/miles.jpg",
       "clubId": "a37c",
-      "description": "En kväll dedikerad till Miles Davis, där vi utforskar hans banbrytande verk och inflytande på jazzhistorien."
+      "description": "An evening dedicated to Miles Davis, where we explore his groundbreaking works and his influence on jazz history."
     },
     {
       "id": "9",
@@ -97,7 +97,7 @@
       "time": "20:00",
       "img": "/assets/images/ella.jpg",
       "clubId": "a37c",
-      "description": "En varm och svängig kväll där vi firar Ella Fitzgeralds tidlösa röst och hennes mest älskade klassiker."
+      "description": "warm and swinging evening where we celebrate Ella Fitzgerald's timeless voice and her most beloved classics."
     },
     {
       "id": "10",
@@ -106,7 +106,7 @@
       "time": "20:00",
       "img": "/assets/images/coltrane.jpg",
       "clubId": "a37c",
-      "description": "En intensiv hyllning till John Coltranes mästerliga saxofonspel och hans spirituella jazzkompositioner."
+      "description": "An intense tribute to John Coltrane's masterful saxophone playing and his spiritual jazz compositions."
     },
     {
       "id": "14",
@@ -114,7 +114,7 @@
       "date": "2025-11-28",
       "time": "22:00",
       "img": "/assets/images/armstrong.jpg",
-      "description": "En kväll fylld med retro-futuristiska beats och neonljus som tar dig tillbaka till 80-talets synthwave-era.",
+      "description": "An evening filled with retro-futuristic beats and neon lights that transports you back to the synthwave era of the '80s",
       "clubId": "a37c"
     },
     {
