@@ -82,7 +82,7 @@ body.the-pulse-room #page-container > .pulse-main {
 .the-pulse-room .event-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: clamp(1.5rem, 3vw, 3rem);
+    gap: clamp(2rem, 3vw, 3.25rem);
     margin-bottom: 2rem;
 }
 
@@ -113,6 +113,29 @@ body.the-pulse-room #page-container > .pulse-main {
     display: block;
     border-radius: 10px;
     margin-bottom: 0.85rem;
+}
+
+.the-pulse-room .event-card-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    margin-bottom: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.85rem;
+    background: linear-gradient(135deg, rgba(233, 30, 99, 0.25), rgba(0, 229, 255, 0.15));
+    border: 1px dashed rgba(0, 229, 255, 0.5);
+    color: var(--accent);
+    opacity: 0.85;
+    padding: 0 0.75rem;
+    box-sizing: border-box;
+}
+
+.the-pulse-room .event-card-placeholder span {
+    text-align: center;
 }
 
 .the-pulse-room .event-card h3 {
@@ -352,24 +375,27 @@ body.the-pulse-room > footer {
 
     .the-pulse-room .event-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 2.4rem 2.2rem;
+        gap: 2.75rem 2.5rem;
     }
 
     .the-pulse-room .event-card {
         padding: 1.3rem;
+        max-width: none;
+        margin: 0;
     }
 }
 
 @media (min-width: 1025px) {
     .the-pulse-room .event-grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2.5rem;
+        gap: 3rem 3.25rem;
     }
 
     .the-pulse-room .event-card {
         padding: 1.4rem;
-        max-width: 420px;
-        margin: 0 auto;
+        max-width: none;
+        width: 100%;
+        margin: 0;
     }
 }
 
