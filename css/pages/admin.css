@@ -197,12 +197,20 @@ body.admin-page {
    RESPONSIVE
 =========================== */
 
-@media (max-width: 900px) {
+@media (max-width: 611px) {
+
   .admin-container {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100%;
   }
 
   .admin-container h2 {
     font-size: 2rem;
   }
+
+  #event-list{
+    margin-bottom: -100%;
+  }
+
 }
