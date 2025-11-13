@@ -3,6 +3,7 @@
     let userName = "";
     let passwordString = "";
     import createEvent from '../main.js';
+    import { attachBookEventHandlers } from "../bookEventHandler.js";
     
     export default async function loadRallyHouse() {
         const response = await fetch("http://localhost:3000/events");
@@ -58,6 +59,13 @@
             <h2>${title}</h2>
             <h3>${date}</h3>
             <h4>${time}</h4>
+            <button 
+                class="book-event-btn" 
+                data-club="${clubId}" 
+                data-id="hh72"
+                data-title="${title}">
+                Book Event
+            </button>
             </article>
             `
             
@@ -92,11 +100,13 @@ return `    <form id="myForm">
             ${toReturnEvents()}
         </div>
 
-        <div id="adminOnly">
+        <div id="rallyBooking">
 
         </div>
 
-        <p class="pulse-footer-copy">© 2025 Rally House – All Rights Reserved</p>
+        <div id="adminOnly">
+
+        </div>
 
     </div>`;
 
@@ -107,7 +117,7 @@ export async function functions(){
         const passwordResponse = await fetch("http://localhost:3000/passwords");
         const password = await passwordResponse.json();
 
-        document.getElementById("firstInput").addEventListener("keydown", (event) => {
+        document.getElementById("rallyBooking").addEventListener("keydown", (event) => {
             if (event.key === "Enter") {
                 event.preventDefault();
                 userName = event.target.value;
@@ -183,6 +193,8 @@ export async function functions(){
                 });
             }
         }
+
+        setTimeout(() => attachBookEventHandlers(), 0);
 
 }
         
