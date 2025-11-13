@@ -11,8 +11,7 @@ export default async function loadGiggleGalaxy() {
   // Set body class for page-specific theme
   document.body.className = "giggle-galaxy";
 
-  // Return structured and semantic HTML
-  return `
+  const html = `
     <div class="gg-wrapper">
       <header class="gg-header">
         <h1 class="gg-title">${club.name}</h1>
@@ -28,18 +27,29 @@ export default async function loadGiggleGalaxy() {
         <section class="gg-events">
           <h2>Upcoming Shows</h2>
           <div class="gg-event-list">
-            ${
+           ${
               events.length > 0
                 ? events
                     .map(
                       (ev) => `
                 <article class="gg-event-card">
                   <h3>${ev.title}</h3>
-                  <p class="gg-event-meta"><strong>${ev.date}</strong> – ${ev.time}</p>
+                  <p class="gg-event-meta">
+                    <strong>${ev.date}</strong> – ${ev.time}
+                  </p>
+
                   <details>
                     <summary>More info</summary>
                     <p>${ev.description || "No description available."}</p>
                   </details>
+
+                  <button 
+                    class="book-event-btn"
+                    data-club="${clubId}"
+                    data-id="${ev.id}"
+                    data-title="${ev.title}">
+                    Book Event
+                  </button>
                 </article>
               `
                     )
@@ -55,6 +65,19 @@ export default async function loadGiggleGalaxy() {
       </footer>
     </div>
   `;
+ 
+  setTimeout(() => {
+    document.querySelectorAll(".book-event-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        localStorage.setItem("preselectClub", btn.dataset.club);
+        localStorage.setItem("preselectEvent", btn.dataset.id);
+
+        window.location.hash = "#booking";
+      });
+    });
+  }, 0);
+
+  return html;
 }
 
 
