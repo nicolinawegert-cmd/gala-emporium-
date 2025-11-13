@@ -108,6 +108,8 @@ return `    <form id="myForm">
 
         </div>
 
+        <p class="pulse-footer-copy">© 2025 Rally House</p>
+
     </div>`;
 
 }
