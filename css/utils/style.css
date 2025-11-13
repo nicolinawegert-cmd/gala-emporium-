@@ -29,47 +29,41 @@ body {
 }
 
 header {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-  border-bottom: none !important; 
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 nav {
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-
-  padding: 1rem 3rem;
-  position: sticky;
-  top: 0;
+  height: 50px;
+  padding-top:20px;
+  width: 100%;
+  text-align: center;
+  position:sticky;
+  top:0;
   z-index: 1000;
-
   background: linear-gradient(135deg,
       rgba(30, 30, 30, 0.8),
       rgba(0, 0, 0, 0.9));
   backdrop-filter: blur(12px);
-
   border-bottom: 2px solid rgba(212, 175, 55, 0.8);
-
   box-shadow:
     0 2px 10px rgba(0, 0, 0, 0.6),
     inset 0 1px 0 rgba(255, 255, 255, 0.1),
     inset 0 -2px 10px rgba(212, 175, 55, 0.4);
 }
-
 nav a {
+  display: inline-block;     
+  margin: 0 0.75rem;            
   color: var(--color-accent);
   text-decoration: none;
   font-family: var(--font-secondary);
   font-weight: 600;
   font-size: 1.15rem;
   letter-spacing: 0.5px;
-
   padding: 0.3rem 0.5rem;
   position: relative;
   transition: color 0.3s ease, text-shadow 0.3s ease;
-  justify-content: 
 }
 
 nav a::after {
@@ -92,3 +86,10 @@ nav a:hover {
   color: var(--color-primary);
   text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
 }
+/* Mobil */
+@media (max-width: 480px) {
+  nav {
+    height: auto;              /* låt höjden följa innehållet */
+    padding: 0.75rem 1rem;
+  }
+  
