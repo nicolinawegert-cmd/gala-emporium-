@@ -6,7 +6,7 @@ export default async function loadPulseRoom() {
     const club = await getClub(clubId);
     const events = await getEvents(clubId);
 
-    document.body.classList.add("the-pulse-room");
+    document.body.className = "the-pulse-room";
 
    const html = `
         <header class="pulse-header">
