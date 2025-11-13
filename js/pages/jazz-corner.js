@@ -1,4 +1,5 @@
 import { getClub, getEvents } from '../api.js';
+import { attachBookEventHandlers } from "../bookEventHandler.js";
 
 export default async function loadJazzCorner() {
     const clubId = "a37c";
@@ -17,7 +18,15 @@ export default async function loadJazzCorner() {
                 <h3>${ev.title}</h3>
                 <p>${ev.date ?? ''}</p>
                 <p>${ev.description ?? ''}</p>
+
+                <button 
+                class="book-event-btn"
+                data-club="a37c"
+                data-id="${ev.id}">
+                Book Event
+                </button>
             </article>
+            
         `;
     }
 
@@ -53,5 +62,6 @@ export default async function loadJazzCorner() {
             </footer>
         </section>
     `;
-     return html;
+    attachBookEventHandlers();
+    return html;
 }
