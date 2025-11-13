@@ -17,14 +17,14 @@ export default async function loadStart() { //skapar funktionen LoadStart
     </section>
 
     <section class="grand-events">
-        <h2 class="section-title">Kommande Framträdanden</h2>
+        <h2 class="section-title">Upcoming Performances</h2>
 
         <div class="event-posters">
             ${upcoming.map(ev => `
                 <article class="event-poster">
                     <h3>${ev.title}</h3>
                     <p class="event-date">${ev.date} • ${ev.time ?? ""}</p>
-                    <a href="#${clubRoute[ev.clubId] || 'start'} " class="event-link">Till klubb →</a>
+                    <a href="#${clubRoute[ev.clubId] || 'start'} " class="event-link">To club →</a>
                 </article>
             `).join("")}
         </div>
