@@ -193,7 +193,7 @@ export default async function loadBooking() {
     }
   });
 
-  return container.outerHTML;
+  return container;
 }
 
 /* INPUT CREATOR ----------------------------- */
