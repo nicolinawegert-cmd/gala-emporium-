@@ -82,7 +82,7 @@ body.the-pulse-room #page-container > .pulse-main {
 .the-pulse-room .event-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: clamp(1.25rem, 2.5vw, 2.5rem);
+    gap: clamp(1.5rem, 3vw, 3rem);
     margin-bottom: 2rem;
 }
 
@@ -140,6 +140,20 @@ body.the-pulse-room #page-container > .pulse-main {
     flex-direction: column;
 }
 
+.the-pulse-room .event-details-body {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    line-height: 1.45;
+    color: var(--text);
+    max-height: 5.5rem;
+    overflow-y: auto;
+    padding-right: 0.25rem;
+}
+
+.the-pulse-room .event-details-body p {
+    margin: 0;
+}
+
 .the-pulse-room .event-card details summary {
     font-weight: 600;
     letter-spacing: 0.03em;
@@ -160,20 +174,6 @@ body.the-pulse-room #page-container > .pulse-main {
 
 .the-pulse-room .event-card details[open] summary::after {
     content: "-";
-}
-
-.the-pulse-room .event-details-body {
-    margin-top: 0.4rem;
-    font-size: 0.8rem;
-    line-height: 1.45;
-    color: var(--text);
-    max-height: 5.5rem;
-    overflow-y: auto;
-    padding-right: 0.25rem;
-}
-
-.the-pulse-room .event-details-body p {
-    margin: 0;
 }
 
 .the-pulse-room .book-event-btn {
@@ -351,12 +351,12 @@ body.the-pulse-room > footer {
     }
 
     .the-pulse-room .event-grid {
-        grid-template-columns: repeat(2, minmax(240px, 1fr));
-        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2.4rem 2.2rem;
     }
 
     .the-pulse-room .event-card {
-        padding: 1.25rem;
+        padding: 1.3rem;
     }
 }
 

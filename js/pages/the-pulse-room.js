@@ -9,7 +9,7 @@ export default async function loadPulseRoom() {
 
     document.body.className = "the-pulse-room";
 
-   const html = `
+    const html = `
         <header class="pulse-header">
             <h1 class="pulse-title">${club.name}</h1>
             <p class="pulse-tagline">${club.description}</p>
