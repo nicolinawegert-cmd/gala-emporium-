@@ -22,7 +22,7 @@ export default async function loadPulseRoom() {
                         <h3>${ev.title}</h3>
                         <p><strong>${ev.date}</strong></p>
                         <details>
-                            <summary>Mer info</summary>
+                            <summary>More info</summary>
                             <p>${ev.description}</p>
                         </details>
                         <button 
