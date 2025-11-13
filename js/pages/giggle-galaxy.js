@@ -1,5 +1,6 @@
 // Import functions for fetching club and event data
 import { getClub, getEvents } from "../api.js";
+import { attachBookEventHandlers } from "../bookEventHandler.js";
 
 export default async function loadGiggleGalaxy() {
   const clubId = "gg01";
@@ -12,7 +13,7 @@ export default async function loadGiggleGalaxy() {
   document.body.className = "giggle-galaxy";
 
   // Return structured and semantic HTML
-  return `
+  const html = `
     <div class="gg-wrapper">
       <header class="gg-header">
         <h1 class="gg-title">${club.name}</h1>
@@ -36,10 +37,20 @@ export default async function loadGiggleGalaxy() {
                 <article class="gg-event-card">
                   <h3>${ev.title}</h3>
                   <p class="gg-event-meta"><strong>${ev.date}</strong> – ${ev.time}</p>
+                  
+
                   <details>
                     <summary>More info</summary>
                     <p>${ev.description || "No description available."}</p>
                   </details>
+                  
+                  <button 
+                    class="book-event-btn"
+                    data-club="${clubId}"
+                    data-id="${ev.id}">
+                    Book Event
+                  </button>
+
                 </article>
               `
                     )
@@ -55,6 +66,9 @@ export default async function loadGiggleGalaxy() {
       </footer>
     </div>
   `;
+
+  setTimeout(() => attachBookEventHandlers(), 0);
+  return html;
 }
 
 
