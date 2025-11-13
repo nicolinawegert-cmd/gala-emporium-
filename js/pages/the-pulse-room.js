@@ -1,4 +1,5 @@
 import { getClub, getEvents } from "../api.js";
+import { attachBookEventHandlers } from "../bookEventHandler.js";
 
 export default async function loadPulseRoom() {
     const clubId = "tp45";
@@ -52,17 +53,6 @@ export default async function loadPulseRoom() {
         </main>
     `;
 
-    setTimeout(() => {
-        document.querySelectorAll(".book-event-btn").forEach(btn => {
-            btn.addEventListener("click", () => {
-
-                localStorage.setItem("preselectClub", btn.dataset.club);
-                localStorage.setItem("preselectEvent", btn.dataset.id);
-
-                window.location.hash = "#booking";
-            });
-        });
-    }, 0);
-
+    setTimeout(() => attachBookEventHandlers(), 0);
     return html;
 }
