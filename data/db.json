@@ -63,7 +63,7 @@
     {
       "id": "5",
       "title": "PXRKX set",
-      "date": "2025-12-01",
+      "date": "2025-11-16",
       "time": "17:30",
       "clubId": "hh72"
     },
@@ -122,7 +122,7 @@
       "title": "Rhythm Awakening",
       "date": "2025-11-05",
       "time": "19:00",
-      "description": "En dansperformance där ljus och ljud samspelar i realtid.",
+      "description": "A dance performance where light and sound interact in real time.",
       "img": "/assets/images/rhythm-awakening.jpg",
       "clubId": "tp45"
     },
@@ -131,7 +131,7 @@
       "title": "Neon Motion",
       "date": "2025-11-12",
       "time": "20:00",
-      "description": "Elektronisk danskväll med live-DJ och visuell ljusshow.",
+      "description": "Electronic dance night with a live DJ and visual light show.",
       "img": "/assets/images/neon-motion.jpg",
       "clubId": "tp45"
     },
@@ -140,7 +140,7 @@
       "title": "Pulse Experiment",
       "date": "2025-11-20",
       "time": "21:00",
-      "description": "Publiken styr musiken genom rörelse – känn rytmen på riktigt!",
+      "description": "The audience controls the music through movement – feel the rhythm for real!",
       "img": "/assets/images/pulse-experiment.jpg",
       "clubId": "tp45"
     }
