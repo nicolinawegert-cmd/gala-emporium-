@@ -24,17 +24,16 @@
     {
       "id": "tp45",
       "name": "The Pulse Room",
-      "description": "The Pulse Room - An electrifying nightclub that pulses with energy, where cutting-edge electronic music meets immersive visual experiences.\n\n Founded in 2023 by DJ and visual artist Maxine Vega, The Pulse Room is a haven for electronic music enthusiasts. The club features state-of-the-art sound systems, dynamic lighting, and interactive installations that create a multisensory experience for partygoers."
+      "description": "The Pulse Room - An electrifying nightclub that pulses with energy, where cutting-edge electronic music meets immersive visual experiences.\n\n The Pulse Room is a haven for electronic music enthusiasts. The club features state-of-the-art sound systems, dynamic lighting, and interactive installations that create a multisensory experience for partygoers."
     }
   ],
   "events": [
     {
-      "id": "1",
       "title": "Starlight Standup",
+      "clubId": "gg01",
       "date": "2025-11-10",
       "time": "19:00",
-      "description": "Starlight Standup invites you on a journey through laughter and light — where cosmic humor meets neon dreams, and every punchline shines brighter than the stars themselves.",
-      "clubId": "gg01"
+      "id": "1"
     },
     {
       "id": "2",

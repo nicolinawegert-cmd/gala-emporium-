@@ -9,7 +9,7 @@ export default async function loadPulseRoom() {
 
     document.body.className = "the-pulse-room";
 
-   const html = `
+    const html = `
         <header class="pulse-header">
             <h1 class="pulse-title">${club.name}</h1>
             <p class="pulse-tagline">${club.description}</p>
@@ -24,7 +24,9 @@ export default async function loadPulseRoom() {
                         <p><strong>${ev.date}</strong></p>
                         <details>
                             <summary>More info</summary>
-                            <p>${ev.description}</p>
+                            <div class="event-details-body">
+                                <p>${ev.description ?? "More info coming soon."}</p>
+                            </div>
                         </details>
                         <button 
                             class="book-event-btn" 

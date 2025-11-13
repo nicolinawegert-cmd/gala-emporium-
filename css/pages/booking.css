@@ -21,20 +21,42 @@ body.booking-page {
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
 }
 
 /* ------------------------------
    PAGE WRAPPER
 --------------------------------*/
 .booking-page section.booking-page {
-    width: min(900px, 95%);
-    padding: 2.5rem;
-    margin-top: 3rem;
+    width: min(960px, calc(100% - 2rem));
+    padding: clamp(1.75rem, 4vw, 3rem);
+    margin: clamp(1rem, 4vw, 2.5rem) auto 2.5rem;
     background: var(--card);
     border: 1px solid var(--primary-dark);
     border-radius: 12px;
     box-shadow: 0 0 30px rgba(0,0,0,0.4);
+    box-sizing: border-box;
+}
+
+body.booking-page header,
+body.booking-page header nav {
+    align-self: stretch;
+    width: 100%;
+}
+
+body.booking-page header nav,
+body.booking-page header nav a {
+    font-family: var(--font-secondary, "Montserrat", sans-serif);
+}
+
+body.booking-page #page-container {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* ------------------------------
@@ -61,14 +83,15 @@ body.booking-page {
    FORM
 --------------------------------*/
 .booking-page form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem 1.5rem;
 }
 
 .booking-page label {
     display: flex;
     flex-direction: column;
+    gap: 0.35rem;
     font-size: 1.1rem;
     color: var(--primary);
 }
@@ -92,6 +115,7 @@ body.booking-page {
 }
 
 .booking-page button[type="submit"] {
+    grid-column: 1 / -1;
     margin-top: 1rem;
     padding: 0.8rem;
     font-size: 1.2rem;
@@ -175,8 +199,15 @@ body.booking-page {
    RESPONSIVE
 --------------------------------*/
 @media (max-width: 600px) {
+    body.booking-page #page-container {
+        width: 100%;
+        padding: 0;
+    }
+
     .booking-page section.booking-page {
-        padding: 1.5rem;
+        width: min(520px, calc(100% - 1rem));
+        margin: 1rem auto 2rem;
+        padding: 1.5rem 1.25rem;
     }
 
     .booking-page h1 {
@@ -185,5 +216,51 @@ body.booking-page {
 
     .booking-page h2 {
         font-size: 1.4rem;
+    }
+
+    .booking-page form {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .booking-page label {
+        font-size: 1rem;
+    }
+
+    #booking-result,
+    .cancel-box {
+        padding: 1.25rem;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    body.booking-page #page-container {
+        padding: 0 1.5rem;
+    }
+
+    .booking-page section.booking-page {
+        width: min(780px, calc(100% - 2.5rem));
+        margin: 1.5rem auto 2.5rem;
+        padding: 1.75rem 1.75rem 2.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .booking-page section.booking-page {
+        border-radius: 18px;
+    }
+
+    .booking-page form {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+
+    .booking-page form label:nth-last-child(2),
+    .booking-page form label:nth-last-child(3) {
+        grid-column: span 1;
+    }
+
+    .booking-page button[type="submit"] {
+        justify-self: flex-end;
+        width: min(260px, 100%);
     }
 }
