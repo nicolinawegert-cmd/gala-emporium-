@@ -53,4 +53,5 @@ export default async function loadJazzCorner() {
             </footer>
         </section>
     `;
+     return html;
 }
