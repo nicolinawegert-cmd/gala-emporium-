@@ -24,7 +24,9 @@ export default async function loadPulseRoom() {
                         <p><strong>${ev.date}</strong></p>
                         <details>
                             <summary>More info</summary>
-                            <p>${ev.description}</p>
+                            <div class="event-details-body">
+                                <p>${ev.description ?? "More info coming soon."}</p>
+                            </div>
                         </details>
                         <button 
                             class="book-event-btn" 
