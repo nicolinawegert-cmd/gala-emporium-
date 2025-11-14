@@ -61,9 +61,7 @@ export default async function loadGiggleGalaxy() {
         </section>
       </main>
 
-      <footer class="gg-footer">
-        <p>&copy; 2025 Giggle Galaxy Comedy Club</p>
-      </footer>
+     
     </div>
   `;
 

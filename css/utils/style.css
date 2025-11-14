@@ -1,10 +1,10 @@
 @import '../pages/start-page.css';
-@import '../pages/booking.css';
 @import '../pages/the-pulse-room.css';
 @import '../pages/jazz-corner.css';
 @import '../pages/giggle-galaxy.css';
 @import '../pages/rally-house.css';
-@import '../pages/moose-vibes.css';
+/*@import '../pages/moose-vibes.css';*/
+@import '../pages/booking.css';
 @import '../pages/admin.css';
 
 /* Globala variabler */

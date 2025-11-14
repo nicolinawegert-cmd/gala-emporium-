@@ -13,11 +13,11 @@ export default async function loadStart() { //skapar funktionen LoadStart
     <section class="hero-antique">
         <div class="hero-overlay"></div>
         <h1 class="hero-title">Gala Emporium</h1>
-        <p class="hero-subtitle">Where Elegance Meets Performance</p>
+        <p class="hero-subtitle">Find Your Night. Book Your Experience.</p>
     </section>
 
     <section class="grand-events">
-        <h2 class="section-title">Upcoming Performances</h2>
+        <h2 class="section-title">Upcoming Events</h2>
 
         <div class="event-posters">
             ${upcoming.map(ev => `

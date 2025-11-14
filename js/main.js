@@ -5,6 +5,7 @@ import loadPulseRoom from './pages/the-pulse-room.js';
 import loadJazzCorner from './pages/jazz-corner.js';
 import loadGiggleGalaxy from './pages/giggle-galaxy.js';
 import loadRallyHouse, {functions} from './pages/rally-house.js';
+import { attachBookEventHandlers } from "./bookEventHandler.js";
 
 
 
@@ -48,6 +49,9 @@ async function loadPageContent() {
   } else {
     pageContainer.innerHTML = content;
   }
+
+  //Attach booking button listeners AFTER HTML is in DOM
+  attachBookEventHandlers();
 
   if (typeof eventFunction === 'function') {
     eventFunction();

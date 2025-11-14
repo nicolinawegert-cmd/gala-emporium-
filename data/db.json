@@ -24,17 +24,16 @@
     {
       "id": "tp45",
       "name": "The Pulse Room",
-      "description": "The Pulse Room - An electrifying nightclub that pulses with energy, where cutting-edge electronic music meets immersive visual experiences.\n\n Founded in 2023 by DJ and visual artist Maxine Vega, The Pulse Room is a haven for electronic music enthusiasts. The club features state-of-the-art sound systems, dynamic lighting, and interactive installations that create a multisensory experience for partygoers."
+      "description": "The Pulse Room - An electrifying nightclub that pulses with energy, where cutting-edge electronic music meets immersive visual experiences.\n\n The Pulse Room is a haven for electronic music enthusiasts. The club features state-of-the-art sound systems, dynamic lighting, and interactive installations that create a multisensory experience for partygoers."
     }
   ],
   "events": [
     {
-      "id": "1",
       "title": "Starlight Standup",
+      "clubId": "gg01",
       "date": "2025-11-10",
       "time": "19:00",
-      "description": "Starlight Standup invites you on a journey through laughter and light — where cosmic humor meets neon dreams, and every punchline shines brighter than the stars themselves.",
-      "clubId": "gg01"
+      "id": "1"
     },
     {
       "id": "2",
@@ -86,7 +85,7 @@
       "title": "Miles Davis Tribute",
       "date": "2025-11-10",
       "time": "20:00",
-      "img": "/assets/images/miles.jpg",
+      "img": "assets/images/miles.jpg",
       "clubId": "a37c",
       "description": "An evening dedicated to Miles Davis, where we explore his groundbreaking works and his influence on jazz history."
     },
@@ -95,7 +94,7 @@
       "title": "Ella Fitzgerald Night",
       "date": "2025-11-17",
       "time": "20:00",
-      "img": "/assets/images/ella.jpg",
+      "img": "assets/images/ella.jpg",
       "clubId": "a37c",
       "description": "warm and swinging evening where we celebrate Ella Fitzgerald's timeless voice and her most beloved classics."
     },
@@ -104,7 +103,7 @@
       "title": "John Coltrane Celebration",
       "date": "2025-11-24",
       "time": "20:00",
-      "img": "/assets/images/coltrane.jpg",
+      "img": "assets/images/coltrane.jpg",
       "clubId": "a37c",
       "description": "An intense tribute to John Coltrane's masterful saxophone playing and his spiritual jazz compositions."
     },
@@ -113,7 +112,7 @@
       "title": "Loius Armstrong Tribute",
       "date": "2025-11-28",
       "time": "22:00",
-      "img": "/assets/images/armstrong.jpg",
+      "img": "assets/images/armstrong.jpg",
       "description": "An evening filled with retro-futuristic beats and neon lights that transports you back to the synthwave era of the '80s",
       "clubId": "a37c"
     },
@@ -123,7 +122,7 @@
       "date": "2025-11-05",
       "time": "19:00",
       "description": "A dance performance where light and sound interact in real time.",
-      "img": "/assets/images/rhythm-awakening.jpg",
+      "img": "assets/images/rhythm-awakening.jpg",
       "clubId": "tp45"
     },
     {
@@ -132,7 +131,7 @@
       "date": "2025-11-12",
       "time": "20:00",
       "description": "Electronic dance night with a live DJ and visual light show.",
-      "img": "/assets/images/neon-motion.jpg",
+      "img": "assets/images/neon-motion.jpg",
       "clubId": "tp45"
     },
     {
@@ -141,7 +140,7 @@
       "date": "2025-11-20",
       "time": "21:00",
       "description": "The audience controls the music through movement – feel the rhythm for real!",
-      "img": "/assets/images/pulse-experiment.jpg",
+      "img": "assets/images/pulse-experiment.jpg",
       "clubId": "tp45"
     }
   ]
