@@ -119,7 +119,7 @@ export async function functions(){
         const passwordResponse = await fetch("http://localhost:3000/passwords");
         const password = await passwordResponse.json();
 
-        document.getElementById("rallyBooking").addEventListener("keydown", (event) => {
+        document.getElementById("firstInput").addEventListener("keydown", (event) => {
             if (event.key === "Enter") {
                 event.preventDefault();
                 userName = event.target.value;
